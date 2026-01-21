@@ -95,7 +95,7 @@
 	justify-content: flex-end;
 }
 
-.messageOutput { stcommentcontent
+.messageOutput {
 	display: inline-block;
 	float: left;
 	min-height: 1.6rem;
