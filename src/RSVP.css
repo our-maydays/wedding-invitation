@@ -1,0 +1,58 @@
+.rsvp-question {
+	width: 80%;
+	font-size: 1.6rem;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.rsvp-input {
+	font-family: Regular;
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+	padding: 0.5rem;
+	height: 1.6rem;				 
+	border-radius: 0.8rem;
+	background-color: rgb(242,238,238);
+	border: none;
+	outline: none;
+}
+
+.rsvp-input:focus,
+.rsvp-input:hover,
+.rsvp-input:focus-visible {
+	outline: none;
+}
+
+
+.rsvp-toggle {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.rsvp-toggle .button {
+	width: 15rem;
+}
+
+.rsvp-toggle .button.active {
+	outline: 1.5px solid #BAD4B9;
+}
+
+.rsvp-name {
+
+}
+
+.rsvp-attendance {
+
+}
+
+.rsvp-guest {
+
+}
+
+.rsvp-side {
+
+}
+
+

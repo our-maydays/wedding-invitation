@@ -1,0 +1,59 @@
+.dday-wrapper {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dday-div {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	line-height: 1.6rem;
+	margin: 0 auto;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	color: gray;
+}
+
+.dday-box {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	flex-wrap: nowrap;
+	line-height: 1.6rem;
+	margin: 0 auto;
+}
+
+.dday-sep {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.6rem;
+	margin: 0;
+	padding: 0;
+}
+
+.dday-txt {
+	display: inline-block;
+	line-height: 1rem;
+	margin: auto;
+	width: auto;
+}
+
+.dday-idx {
+	display: inline-block;
+	margin: 0 auto;
+	font-size: 1rem;
+	color: gray;
+}
+
+.dday-num {
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	vertical-align: middle;
+	line-height: 1.6rem;
+	-webkit-text-stroke: 0.5px;
+}

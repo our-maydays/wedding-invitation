@@ -1,0 +1,58 @@
+.box {
+	font-family: Bold;
+	font-size: 1.6rem;
+	width: 60%;
+	margin: auto;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.parentname {
+	font-family: Bold;
+	font-size: 1.6rem;
+	padding-left: 0;
+	padding-right: 0;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	-webkit-text-stroke: 0.5px black;
+}
+
+.separate {
+	font-family: Regular;
+	padding-left: 0;
+	padding-right: 0;
+	width: 3%;
+	color: gray; /*color: #344859; */
+}
+
+.namebox {
+margin: 0;
+padding: 0;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	-webkit-text-stroke: 0.5px black;
+}
+
+.type {
+padding: 0;
+margin: 0;
+	font-family: Regular;
+display: flex;
+	justify-content: left;
+color: gray;
+}
+
+.sd {
+	padding: 0;
+	margin: 0;
+	font-family: Regular;
+	width: 18%;
+	display: flex;
+	justify-content: center;
+	color: gray;
+}

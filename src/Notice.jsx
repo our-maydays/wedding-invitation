@@ -1,0 +1,43 @@
+import './App.css'
+import './Notice.css'
+
+const Notice = () => {
+	return (
+
+		<div className='content-box'>
+			<div className='space-box-4rem'/>
+				<div className='notice-wrapper'>
+					<div className='notice-title'>
+	
+						<div className='section-subtitle'>N O T I C E</div>
+						<div className='section-title'>안내사항</div>
+					</div>
+				<div className='notice-content'>
+					<div style={{
+						fontSize:'1.6rem',
+						textAlign: 'center',
+						width: '90%',
+						margin: '0 auto',
+						lineHeight: '2.5rem',
+					}}>
+						<span>
+							예식은 야외에서 진행되오니,<br/>
+							선글라스 지참을 추천드립니다<br/>
+							우천 시 예식 장소는 실내로<br/>
+							변경될 수 있습니다<br/><br/>
+							식사는 오후 1시부터 본관 4층<br/>
+							컨벤션홀에서 제공합니다<br/><br/>
+						 	'도도한 쭈쭈바'의 소소한<br/>
+							축하 무대가	준비되어 있습니다<br/>
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div className='space-box-4rem'/>
+
+		</div>
+	)
+}
+
+export default Notice

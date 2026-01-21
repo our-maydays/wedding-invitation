@@ -1,0 +1,733 @@
+import './App.css'
+import './GuestBook.css'
+
+import { useState, useEffect, useRef } from 'react'
+import moment from 'moment'
+import 'moment/dist/locale/ko'
+import SHA256 from 'crypto-js/sha256'
+
+const sendIcon = `${import.meta.env.BASE_URL}/icon/send.svg`
+const messageIcon = `${import.meta.env.BASE_URL}/icon/message.svg`
+const loginIcon = `${import.meta.env.BASE_URL}/icon/check.svg`
+const closeIcon = `${import.meta.env.BASE_URL}/icon/close_icon.svg`
+const lockIcon = `${import.meta.env.BASE_URL}/icon/lock.svg`
+const unlockIcon = `${import.meta.env.BASE_URL}/icon/unlock.svg`
+const editIcon = `${import.meta.env.BASE_URL}/icon/write.svg`
+const eraseIcon = `${import.meta.env.BASE_URL}/icon/erase.svg`
+const nameIcon = `${import.meta.env.BASE_URL}/icon/user.svg`
+
+import Modal from 'react-modal'
+import { 
+	collection, 
+	doc,
+	addDoc,
+	getDocs,
+	updateDoc,
+	deleteDoc,
+	orderBy,
+	query,
+	limit
+	} from 'firebase/firestore'
+import { db } from './firebase'
+
+Modal.setAppElement('#root')
+
+const hashPassword = (password) => {
+	return SHA256(password).toString()
+}
+
+const GuestBook = () => {
+	Modal.setAppElement('#root')
+	moment.locale('ko')
+	const [name, setName] = useState('')
+	const [content, setContent] = useState('')
+	const [password, setPassword] = useState('')
+
+	const [comments, setComments] = useState([])
+	
+	const [querySnapshot, setQuerySnapshot] = useState(null)
+	const [isLoading, setIsLoading] = useState(false)
+	
+	const [selectedComment, setSelectedComment] = useState(null)
+	const [inputPassword, setInputPassword] = useState('')
+	const [isAuthorized, setIsAuthorized] = useState(false)
+	const [editContent, setEditContent] = useState('')
+	const [editName, setEditName] = useState('')
+
+	const [isOpenNew, setIsOpenNew] = useState(false)
+	const [isOpenVerify, setIsOpenVerify] = useState(false)
+	const [isOpenOld, setIsOpenOld] = useState(false)
+
+	const scrollRef = useRef(null)
+
+	const [show, setShow] = useState(false)
+	const timerRef = useRef(null)
+
+	const fetchData = async (newLimit) => {
+		setIsLoading(true)
+		const querySnapshot = await getDocs(
+			query(
+				collection(db, 'comment'),
+				orderBy('createdAt','desc'),
+				limit(newLimit)
+			)
+		)
+		setQuerySnapshot(querySnapshot)
+		setIsLoading(false)
+	}
+
+	useEffect( () => {
+		fetchData(10);
+	}, [])
+	
+	const loadMoreData = () => {
+		if (!isLoading) {
+			const newLimit = querySnapshot.docs.length + 5
+			fetchData(newLimit)
+		}
+	}
+
+	const onClickSubmitHandler = async () => {
+		const createdAt = new Date()
+		const validName = name.trim().length > 0
+		const validContent = content.trim().length > 0
+		const validPassword = password.trim().length > 0
+		const errors = []
+
+		if (!validName) errors.push('이름')
+		if (!validPassword) errors.push('비밀번호')
+		if (!validContent) errors.push('메세지')
+
+		if (errors.length > 0) {
+			alert(`${errors.join(', ')} 항목을 입력해주세요`)
+		} else {
+			const passwordHash = hashPassword(password)
+			await addDoc(collection(db,'comment'), {
+				name: name,
+				content: content,
+				passwordHash: passwordHash,
+				createdAt: createdAt,
+			})
+
+			const newComment = {
+				id: comments.length,
+				name,
+				content,
+				passwordHash,
+				createdAt,
+			}
+
+			setComments([...comments, newComment])
+
+			const querySnapshot = await getDocs(
+				query(collection(db, 'comment'), orderBy('createdAt','desc'))
+			)
+			setQuerySnapshot(querySnapshot)
+
+			setName('')
+			setContent('')
+			setPassword('')
+			setIsOpenNew(false)
+		}
+	}
+
+	const verifyPassword = () => {
+		if (hashPassword(inputPassword) === selectedComment.passwordHash) {
+			setIsAuthorized(true)
+		} else {
+			alert('비밀번호가 일치하지 않습니다')
+		}
+	}
+
+	const handleUpdate = async () => {
+		await updateDoc(doc(db,'comment', selectedComment.id), {
+			content: editContent,
+			name: editName,
+		})
+		closeModal()
+		fetchData(querySnapshot.docs.length) //??
+	}
+
+	const handleDelete = async () => {
+		await deleteDoc(doc(db,'comment', selectedComment.id))
+		closeModal()
+		fetchData(querySnapshot.docs.length)
+	}
+
+	const closeNew = () => {
+		setName('')
+		setContent('')
+		setPassword('')
+		setIsOpenNew(false)
+	}
+
+	const closeModal = () => {
+		setSelectedComment(null)
+		setInputPassword('')
+		setIsAuthorized(false)
+		setIsOpenVerify(false)
+	}
+
+	const passwordShow = () => {
+		console.log('clicked')
+		console.log('show:', show)
+
+		if (timerRef.current) {
+			clearTimeout(timerRef.current)
+		}
+
+		setShow(true)
+
+		timerRef.current = setTimeout( () => {
+			setShow(false)
+			timerRef.current = null
+		}, 3000)
+	}
+
+
+
+	const onChangeNameHandler = (e) => {
+		setName(e.target.value)
+	}
+
+	const onChangeContentHandler = (e) => {
+		setContent(e.target.value)
+	}
+
+	const onChangePasswordHandler = (e) => {
+		const passwordEng = e.target.value.replace(/[^0-9]/g,'');
+		setPassword(passwordEng)
+	}
+
+
+	useEffect( () => {
+		if (isOpenNew) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'auto'
+		}
+
+		return () => {
+			document.body.style.overflow = 'auto'
+		}
+
+	}, [isOpenNew])
+
+
+	useEffect( () => {
+		if (isOpenVerify) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'auto'
+		}
+
+		return () => {
+			document.body.style.overflow = 'auto'
+		}
+
+	}, [isOpenVerify])
+
+
+	useEffect( () => {
+		const div = scrollRef.current
+		if (!div) return;
+		div.addEventListener('scroll',handleScroll)
+		return () => {
+			div.removeEventListener('scroll',handleScroll)
+		}
+	}, [querySnapshot])
+
+
+	const handleScroll = () => {
+		const div = scrollRef.current;
+		if (!div) return;
+		const scrollTop = div.scrollTop
+		const clientHeight = div.clientHeight;
+		const scrollHeight = div.scrollHeight;
+
+		if (-scrollTop + clientHeight >= scrollHeight - 50) {
+			console.log(div.scrollBottom)
+			console.log(scrollTop)
+			console.log(clientHeight)
+			console.log(scrollHeight)
+			loadMoreData();
+		}
+
+
+	}
+
+
+	return (
+		<div className='content-box' style={{
+			display: 'flex',
+			flexDirection: 'column',
+			alignItems: 'center'
+		}}>
+			<div className='space-box-4rem'/>
+
+			<div className='section-subtitle'>G U E S T B O O K</div>
+			<div className='section-title'>방명록</div>
+			<div className='space-box-2rem'/>
+
+			<div className='guestbook'>
+
+				{/* Display Area */}
+
+				<div ref={scrollRef} 
+					style= {{
+						display: 'flex',
+						flexDirection: 'column-reverse',
+						overflowY: 'scroll',
+						width: '100%',
+						height: '399px',
+					}}
+				>
+
+					{querySnapshot &&
+						[...querySnapshot.docs].map( (doc) => (
+							<div 
+								key={doc.id}
+								onClick={ () => {
+									setSelectedComment({ id: doc.id, ...doc.data() })
+									setEditContent(doc.data().content)
+									setEditName(doc.data().name)
+									setIsOpenVerify(true)
+								}}
+							>
+									<div className='nameOutput'> {doc.data().name} </div>
+									
+									<div style={{display: 'flex', flexDirection: 'row', alignItems: 'flex-end'}}>
+										<div className='messageOutput'> {doc.data().content} </div>
+										<div className='dateOutput'>
+											{moment(doc.data().createdAt.toDate()).format('YY.MM.DD')}
+											<br/>
+											{moment(doc.data().createdAt.toDate()).format('a h:mm')}
+										</div>
+									</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
+
+			<div className='space-box-2rem'/>
+
+			{/* Update & Delete Modal */}
+
+			{selectedComment && (
+				<Modal
+					isOpen={isOpenVerify}
+					onRequestClose={closeModal}
+					preventScroll={true}
+					style={{
+						overlay: {
+							backgroundColor: '#D2D7D9CC',
+							zIndex: '1000',
+						},
+						content: {
+							position: 'absolute',
+							top: '50%',
+							left: '50%',
+							transform: 'translate(-50%,-50%)',
+							background: '#F8F7EE',
+							width: '80vw',
+							height: '40vh',
+							minWidth: '370px',
+							maxWidth: '400px',
+							minHeight: '280px',
+							maxHeight: '400px',
+							margin: '0',
+							padding: '0',
+							border: 'none',
+							borderRadius: '1.5rem',
+						},
+					}}
+				>
+					<div style={{height: '100%', display:'flex',flexDirection: 'column',}}>
+						<div style={{display:'flex', justifyContent: 'right'}}>
+							<button
+								onClick={ closeModal}
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									background: 'transparent',
+									fontSize: '1.6rem',
+									border: 'none',
+									cursor: 'pointer',
+									margin: '1rem',
+									padding: '0',
+								}}
+							>
+								<img width={'25rem'} height={'25rem'} src={closeIcon}/>
+							</button>
+						</div>
+
+						<div style={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'space-between',
+							margin: '1rem',
+							marginTop: '0',
+							padding: '0',
+							position: 'relative',
+							height: '100%',
+							width: 'auto',
+						}}>
+							{!isAuthorized ? (
+								<div 
+									style={{
+										display: 'flex',
+										margin: 'auto',
+										alignItems: 'center',
+										justifyContents: 'center',
+										padding: '1rem',
+
+									}}
+								>
+									<div 
+										style={{
+											position: 'relative',
+											display: 'flex',
+											alignItems: 'center',
+											marginRight: '1rem',
+										}}
+									>
+										<div
+											type='button'
+											onClick={passwordShow}
+											style={{
+												margin: '0.5rem',
+												padding: '0',
+												display: 'flex',
+												alignItems: 'center',
+												justifyContent: 'center',
+											}}
+										>
+											<img
+												className='icon'
+												src={show ? unlockIcon : lockIcon}
+											/>
+										</div>
+										<div className='passwordInput'
+											type='password'
+											placeholder='비밀번호'
+											style={{
+												WebkitTextSecurity: show ? 'none' : 'disc'
+											}}
+											onChange={(e) => setInputPassword(e.target.value.replace(/[^a-z]/g,''))}
+											value={inputPassword}
+										/>
+									</div>
+									<button onClick={verifyPassword} style={{
+										lineHeight: '1.6rem',
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center',
+										fontSize: '1.6rem',
+										fontFamily: 'Regular',
+										padding: '0.5rem',
+										background: 'rgb(242,238,238)',
+										boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+										border: 'none',
+										outline: 'none',
+										color: '#2F2359',
+									}}>
+										<img src={loginIcon} className='icon'/>
+									</button>
+								</div>
+							) : (
+								<div style={{ width: '100%', height:'100%'}}>
+									<div style={{
+										display: 'flex',
+										justifyContent: 'space-between',
+										alignItems:'center',
+										margin: '1rem',
+										marginTop:'0',
+										padding: '0',
+										position: 'relative',
+									}}>
+										<div style={{
+											display:'flex',
+											justifyContent: 'center',
+											alignItems: 'center',
+										}}>
+										<img src={nameIcon} className='icon'/>
+										<div className='nameInput'
+											placeholder='이름'
+											onChange={ (e) => setEditName(e.target.value)}
+											value={editName}
+										/>
+										</div>
+									</div>
+
+									<div style={{
+										display: 'flex',
+										justifyContent: 'space-between',
+										alignItems: 'center',
+										margin: '1rem',
+										marginTop: '1.5rem',
+										padding: '0',
+										position: 'relative',
+										height: '70%',
+									}}>
+										<div className='messageInput'
+											rows= '1'
+											placeholder='메세지'
+											onChange={(e) => setEditContent(e.target.value)}
+											value={editContent}
+										/>
+									</div>
+
+									<div 
+										style={{
+											display: 'flex',
+											justifyContent: 'space-between',
+											alignItems: 'center',
+											marginTop: '1rem',
+											width: '70%',
+											margin: 'auto',
+										}}
+									>
+										<button onClick={handleUpdate} style={{
+											height: '3rem',
+											display: 'flex',
+											justifyContent: 'center',
+											alignItems: 'center',
+											background: 'rgb(242,238,238)',
+											boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+											fontSize: '1.6rem',
+											fontFamily: 'Regular',
+											margin: 0, 
+											padding: 0,
+											paddingLeft: '1rem',
+											paddingRight: '1rem',
+											color: 'black',
+										}}>
+											<img src={editIcon} className='icon'/>
+											&nbsp;수정하기
+										</button>
+										<button onClick={handleDelete} style={{
+											height: '3rem',
+											display:'flex',
+											justifyContent: 'center',
+											alignItems: 'center',
+											background: 'rgb(242,238,238)',
+											boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+											fontFamily:'Regular',
+											fontSize: '1.6rem',
+											margin: 0,
+											padding: 0,
+											paddingLeft: '1rem',
+											paddingRight: '1rem',
+											color: 'black',
+										}}> 
+											<img src={eraseIcon} className='icon'/>
+											&nbsp;삭제하기
+										</button>
+									</div>
+								</div>
+							)}
+						</div>
+					</div>
+				</Modal>
+			)}								
+
+
+
+			<button
+				style={{
+					fontSize: '1.6rem',
+					margin: 0,
+					background: 'rgb(242,238,238)',
+					lineHeight: '3rem',
+					width: '90%',
+					textAlign: 'center',
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+					borderRadius: '1rem',
+					padding: '0.5rem',
+					boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+					border: 'none',
+					outline: 'none',
+					color: 'black',
+				}}
+				onClick={() => setIsOpenNew(true) }
+			>
+				<img src={messageIcon} className='icon'/>
+					&nbsp;축하메세지 보내기
+			</button>
+
+			<div className='space-box-4rem'/>
+
+			<Modal 
+				isOpen={isOpenNew}
+				onRequestClose= {closeNew}
+				style={{
+					overlay: {
+						backgroundColor: '#D2D7D9CC',
+						zIndex: '1000',
+					},
+					content: {
+						top: '50%',
+						left: '50%',
+						transform: 'translate(-50%,-50%)',
+						background: '#F8F7EE',
+						width: '390px',
+						height: '330px',
+						border: 'none',
+						margin: '0',
+						padding: '0',
+						borderRadius: '1.5rem',
+					},
+				}}
+			>
+				<div style={{height: '100%'}}>
+					<div style={{display:'flex', justifyContent:'right'}}>
+						<button
+							onClick={closeNew}
+							style={{
+								display: 'flex',
+								alingItems: 'center',
+								justifyContent: 'center',
+								background: 'transparent',
+								color: 'white',
+								fontSize: '1.6rem',
+								border: 'none',
+								cursor: 'pointer',
+								margin: '1rem',
+								padding: '0',
+							}}
+						>
+							<img src={closeIcon} width={'25rem'} height={'25rem'}/>
+						</button>
+					</div>
+
+					<div style={{
+						display: 'flex',
+						justifyContent: 'space-between',
+						alignItems: 'center',
+						margin: '1rem',
+						marginTop: '0',
+						padding: '0',
+						position: 'relative',
+					}}>
+						<div style={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+						}}>
+						<div style={{
+							display: 'flex',
+							justifyContent:'center',
+							alignItems: 'center',
+							padding: 0,
+							margin: 0,
+							marginRight: '0.5rem',
+						}}>
+							<img src={nameIcon} className='icon'/>
+
+						</div>
+						<div className='nameInput'
+							placeholder='이름'
+							onChange={onChangeNameHandler}
+							value={name}
+						/>
+						</div>
+						<div style={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+						}}>
+
+							<div
+								onClick={passwordShow}
+								style= {{
+									margin: '0',
+									padding: '0',
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									marginRight: '0.5rem',
+									outline: 'none',
+									border: 'none',
+									lineHeight: '1.6rem',
+								}}
+							>
+								<img 
+									src={show ? unlockIcon : lockIcon}
+									className='icon'
+								/>
+							</div>
+
+						<div className='passwordInput'
+							type='password'
+							placeholder='비밀번호'
+							style={{
+								WebkitTextSecurity: show ? 'none' : 'disc'
+							}}
+							onChange={onChangePasswordHandler}
+							value={password}
+						/>
+
+							</div>
+					</div>
+
+					<div style={{
+						display: 'flex',
+						justifyContent: 'space-between',
+						alignItems: 'center',
+						margin: '1rem',
+						marginTop: '1.5rem',
+						padding: '0',
+						height: '60%',
+					}}>
+						<div className='messageInput'
+							rows='1'
+							placeholder='메세지를 작성해주세요'
+							onChange={onChangeContentHandler}
+							value={content}
+						/>
+					</div>
+					
+					<div
+						style={{
+							display:'flex',
+							justifyContent: 'center',
+						}}
+					>
+						<button onClick={onClickSubmitHandler} style={{
+							display:'flex',
+							justifyContent:'center',
+							alignItems:'center',
+							width:'10rem',
+							height:'3rem',
+							fontFamily:'Regular',
+							fontSize:'1.6rem',
+							lineHeight:'3rem',
+							padding: '0.5rem',
+							margin: '0.5rem',
+							marginTop: '0.5rem',
+							borderRadius: '1rem',
+							backgroundColor: 'rgb(243,238,238)',
+							boxShadow:'0 2px 4px rgba(0,0,0,0.1)',
+							outline: 'none',
+							border: 'none',
+							color: '#2F2359',
+						}}>
+							<img src={sendIcon} className='icon'/>
+							&nbsp;전송하기
+						</button>
+					</div>
+
+
+				</div>
+			</Modal>
+		</div>
+
+	)
+
+};
+
+export default GuestBook

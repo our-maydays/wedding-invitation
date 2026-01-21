@@ -1,0 +1,110 @@
+.guestbook {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	width: 90%;
+	background-color: #BAD4B9;
+	border-radius: 1.5rem;
+}
+
+.nameInput {
+	display: inline-block;
+	font-family: Regular;
+	font-size: 1.6rem;
+	width: 14rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	padding: 0.5rem;
+	color: black;
+	background-color: #F3E3B4;
+	border-radius: 0.8rem;
+	border: none;
+	outline: none;
+	&:focus {
+		outline: none;
+	}
+	&::placeholder {
+		color: gray;
+	}
+}
+
+.messageInput {
+	display: inline-block;
+	font-size: 1.6rem;
+	font-family: Regular;
+	padding: 0.5rem;
+	width: 100%;
+	height: 100%;
+	line-height: 1.6rem;
+	background-color: #BAD4B9;
+	border: none;
+	outline: none;
+	&:focus {
+		outline: none;
+	}
+	&::placeholder {
+		color: gray;
+	}
+}
+
+.passwordInput {
+	display: inline-block;
+	font-family: Regular;
+	font-size: 1.6rem;
+	width: 14rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	padding: 0.5rem;
+	color: black;
+	background-color: #F3E3B4;
+	border-radius: 0.8rem;
+	border: none;
+	outline: none;
+	&:focus {
+		outline: none;
+	}
+	&::placeholder {
+		color: gray;
+	}
+}
+
+.nameOutput {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 1.4rem;
+	max-width: 10rem;
+	font-size: 1.4rem;
+	font-family: Regular;
+	line-height: 1.4rem;
+	padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+	margin: 0.5rem 0.5rem 0rem 0.8rem;
+	text-align: left;
+}
+
+.dateOutput {
+	min-width: 4.5rem;
+	height: 1.4rem;
+	padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+	margin: 0.5rem 0.5rem 0.8rem 0.2rem;
+	text-align: left;
+	line-height: 1rem;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.messageOutput { stcommentcontent
+	display: inline-block;
+	float: left;
+	min-height: 1.6rem;
+	font-size: 1.6rem;
+	margin: 0.1rem 0.2rem 0.8rem 0.8rem;
+	padding: 0.5rem;
+	text-align: left;
+	border-radius: 0.8rem;
+	background-color: #F3E3B4;
+	color: black;
+}
+

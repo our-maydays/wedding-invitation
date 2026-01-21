@@ -1,0 +1,13 @@
+.intersect {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.intersect.show {
+  opacity: 1;
+  transform: translateY(0);
+}

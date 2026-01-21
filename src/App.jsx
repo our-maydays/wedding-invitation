@@ -1,0 +1,99 @@
+import viteLogo from '/vite.svg'
+import './App.css'
+
+import Intersect from './Intersect'
+import BGM from './BGM'
+import WeddingDay from './WeddingDay'
+import MainPhoto from './MainPhoto'
+import Invitation from './Invitation'
+import Calendar from './Calendar'
+import Location from './Location'
+import Gallery from './Gallery'
+import Video from './Video'
+import Account from './Account'
+import GuestBook from './GuestBook'
+import Notice from './Notice'
+import RSVP from './RSVP'
+import GuestSnap from './GuestSnap'
+import Share from './Share'
+
+function App() {
+	
+	const debug = process.env.NODE_ENV === 'development'?'solid':'none';
+	return (
+		<>
+			<div className='main-frame'>
+				<WeddingDay targetDate='2026-05-09'/>
+
+				<div style={{
+					textAlign: 'right', 
+					position: 'sticky', 
+					top: 0,
+					zIndex: 9,
+				}}>
+					<BGM/>
+				</div>
+				
+				<Intersect>
+					<MainPhoto/>
+				</Intersect>
+			
+				
+				<Intersect className='fade-in'>
+					<Invitation/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Calendar/>				
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Location/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Gallery/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Video/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Account/>
+				</Intersect>
+	
+				<Intersect className='fade-in'>
+					<GuestBook/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Notice/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<RSVP/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<GuestSnap/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Share/>
+				</Intersect>
+
+				<div style={{fontSize: '8px' }}>
+					build time : {import.meta.env.VITE_BUILD_TIME}
+				</div>
+				
+				<Intersect className='fade-in'>
+					Copyright: 경보 와 유진
+				</Intersect>
+
+			</div>
+		</>
+	)
+}
+
+export default App
