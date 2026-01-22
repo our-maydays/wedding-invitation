@@ -52,7 +52,7 @@ const Share = () => {
 				display:'flex',
 				justifyContent: 'space-between',
 				alignItems:'center',
-				width: '80%',
+				width: '32rem',
 				margin: '0 auto',
 				padding: 0,
 			}}>
