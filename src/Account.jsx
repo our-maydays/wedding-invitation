@@ -20,12 +20,16 @@ const Account = () => {
 
 			<div style={{
 				fontSize: '1.6rem' ,
+				lineHeight: '2.5rem',
 				margin: 0,
 				padding: 0,
 			}}>
-				참석이 어려우신 분들을 위해<br/>
-				계좌번호를 기재하였습니다<br/>
-				너그러운 마음으로 양해 부탁드립니다
+				멀리서도 축하의 마음을<br/>
+				전하고 싶으신 분들을 위해<br/>
+				계좌번호를 안내드립니다<br/><br/>
+
+				소중한 축하를 보내주셔서 감사드리며<br/>
+				따뜻한 마음에 깊이 감사드립니다<br/>
 			</div>
 		
 			<Space height={`${sectionDivide}rem`}/>

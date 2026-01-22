@@ -22,16 +22,24 @@ const GuestSnap = () => {
 
 			<Space height={`${sectionDivide}rem`}/>
 
-			<div>
-				저희의 스냅 작가가 되어주세요<br/><br/>
+			<div style={{
+				lineHeight: '2.5rem'
+			}}>
+				📸 저희의 스냅 작가가 되어주세요 📸<br/><br/>
 
-				가장 센스있는 컷을 남겨주신 분께 <br/>
-				소정의 상품을 드립니다<br/>
+				1. 설렘 가득한 신랑, 신부의 모습<br/>
+				2. 웃음 가득 행복한 양가 혼주<br/>
+				3. 신랑, 신부의  입장 및 행진<br/>
+				4. 하객 여러분의 축하, 격려, 응원<br/>
+				5. 가족, 친구와 함께한 순간<br/>
+				6. 그 외 간직하고 싶은 순간들<br/><br/>
+
+				🎁 가장 센스있는 컷을 남겨주신 분들께 <br/>
+				저희의 마음을 담은 선물을 준비했어요<br/>
 
 				<br/>
 
 				아래의 업로드 버튼을 통해 올려주세요<br/>
-				업로드 기한: 26/5/9 13:00 ~ 26/5/11 23:59
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
@@ -40,6 +48,12 @@ const GuestSnap = () => {
 				style={{width: '15rem', margin: 'auto'}}>
 				사진 업로드
 			</div>
+
+			<Space height={'0.5rem'}/>
+			<div style={{color: 'gray', fontSize:'1.2rem'}}>
+				업로드 기한: 26/5/11 23:59까지
+			</div>
+
 		
 			<Space height={`${sectionHeight}rem`}/>
 

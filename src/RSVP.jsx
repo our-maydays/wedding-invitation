@@ -75,7 +75,9 @@ const RSVP = () => {
 
 			<Space height={`${sectionSpace}rem`}/>
 
-			<div>
+			<div style={{
+				lineHeight:'2.5rem'
+			}}>
 				결혼식에 참석해주시는 모든 분들을<br/>
 				더욱 특별하게 모시고자 하오니<br/>
 				참석 여부 전달을 부탁드립니다
