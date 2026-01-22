@@ -53,6 +53,7 @@ const Share = () => {
 				justifyContent: 'space-between',
 				alignItems:'center',
 				width: '32rem',
+				maxWidth: '390px',
 				margin: '0 auto',
 				padding: 0,
 			}}>
