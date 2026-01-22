@@ -1,6 +1,8 @@
 import './App.css'
+import Space from './Space'
 import Snowfall from 'react-snowfall'
 
+const sectionHeight = 4
 
 const mainphoto = `${import.meta.env.BASE_URL}photo/DSC07876.jpg`
 const sakura = `${import.meta.env.BASE_URL}icon/sakura.png`
@@ -38,7 +40,9 @@ const MainPhoto = () => {
 					draggable={false}
 				/>
 			</div>
-			<div className='space-box'/>
+
+			<Space height={`${sectionHeight}rem`}/>
+
 		</div>
 	)
 }
