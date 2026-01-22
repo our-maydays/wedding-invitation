@@ -4,17 +4,23 @@
 
 html, body {
 	color-scheme: light only;
-	font-size: 10px;
 	border: none;
 	outline: none;
 	margin: 0;
 	padding: 0;					
 }
 
+html {
+	font-size: 10px;
+}
+
+html.magnify {
+	font-size: 12px;
+}
+
 #root {
 	margin: 0 auto;
 	text-align: center;
-	font-size: 10px;
 	font-family: Regular;
 	color: black;
 	width: 390px;
@@ -88,6 +94,7 @@ img {
 }
 
 .main-frame {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	color: black;

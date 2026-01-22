@@ -16,6 +16,7 @@ import Notice from './Notice'
 import RSVP from './RSVP'
 import GuestSnap from './GuestSnap'
 import Share from './Share'
+import FontSizeToggle from './FontSizeToggle'
 
 function App() {
 	
@@ -91,6 +92,17 @@ function App() {
 					Copyright: 경보 와 유진
 				</Intersect>
 
+				<div style={{
+					position: 'sticky',
+					bottom: '1%',
+					zIndex: 9,
+					display: 'flex',
+					justifyContent:'flex-end',
+					marginRight: '2%',
+					opacity: 0.5,
+				}}>
+					<FontSizeToggle/>
+				</div>
 			</div>
 		</>
 	)

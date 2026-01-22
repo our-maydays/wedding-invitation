@@ -1,8 +1,10 @@
 import './App.css'
+import './GuestSnap.css'
 import Space from './Space'
 
 const sectionHeight = 4
 const sectionDivide = 3
+const photoUrl = `${import.meta.env.BASE_URL}image/DSC09510.jpg`
 
 const GuestSnap = () => {
 
@@ -26,6 +28,12 @@ const GuestSnap = () => {
 				lineHeight: '2.5rem'
 			}}>
 				📸 저희의 스냅 작가가 되어주세요 📸<br/><br/>
+
+				<div className='image-container'>
+					<img src={photoUrl}/>
+				</div>
+
+				<Space height={`${sectionDivide}rem`}/>
 
 				1. 설렘 가득한 신랑, 신부의 모습<br/>
 				2. 웃음 가득 행복한 양가 혼주<br/>
