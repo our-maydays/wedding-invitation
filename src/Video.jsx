@@ -4,6 +4,10 @@ const myPoster = `${import.meta.env.BASE_URL}video/test.png`
 import {useRef} from 'react'
 import './App.css'
 import './Video.css'
+import Space from './Space'
+
+const sectionHeight = 4
+const sectionDivide = 3
 
 const Video = () => {
 
@@ -22,10 +26,10 @@ const Video = () => {
 
 	return (
 		<div className='content-box'>
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 			<div className='section-subtitle'>V I D E O</div>
 			<div className='section-title'>웨딩비디오</div>
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='video-wrapper'
 				style={{
@@ -49,7 +53,7 @@ const Video = () => {
 					}}
 				/>
 			</div>
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 		</div>
 	)
 }

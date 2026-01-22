@@ -1,11 +1,15 @@
 import './Transport.css'
 import './App.css'
+import Space from './Space'
 
 
 const shuttleIcon = `${import.meta.env.BASE_URL}icon/shuttle.svg`
 const busIcon = `${import.meta.env.BASE_URL}icon/bus.svg`
 const expressbusIcon = `${import.meta.env.BASE_URL}icon/expressbus.svg`
 const carIcon = `${import.meta.env.BASE_URL}icon/car.svg`
+
+const sectionHeight = 4
+const sectionDivide = 3
 
 const Transport = ( ) => {
 
@@ -32,7 +36,7 @@ const Transport = ( ) => {
 				<span className='notation'>	* 편도 운행 </span>
 			</div>
 
-			<div className='space-box'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='name'>
 				<img className='icon' src={busIcon} style={{paddingRight: '0.5rem'}}/>
@@ -42,7 +46,7 @@ const Transport = ( ) => {
 				6번, 7번, 70번, 71번, 508번 / 75광장 하차<br/>
 			</div>
 
-			<div className='space-box'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='name'>
 				<img className='icon' src={expressbusIcon} style={{paddingRight: '0.5rem'}}/>
@@ -52,9 +56,9 @@ const Transport = ( ) => {
 				3003번(김해공항↔태종도) / 75광장 하차<br/>
 				<span className='notation'> * 사상역 / 파라곤호텔 승차</span>
 			</div>
-			
-			<div className='space-box'/>
 
+			<Space height={`${sectionDivide}rem`}/>
+			
 			<div className='name'>
 				<img className='icon' src={carIcon} style={{paddingRight: '0.5rem'}}/>
 				주차

@@ -1,4 +1,8 @@
 import './App.css'
+import Space from './Space'
+
+const sectionHeight = 4
+const sectionDivide = 3
 
 const GuestSnap = () => {
 
@@ -11,12 +15,12 @@ const GuestSnap = () => {
 	return (
 		<div className='content-box'>
 
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 			
 			<div className='section-subtitle'> G U E S T S N A P </div>
 			<div className='section-title'> 게스트스냅 </div>
 
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div>
 				저희의 스냅 작가가 되어주세요<br/><br/>
@@ -30,28 +34,14 @@ const GuestSnap = () => {
 				업로드 기한: 26/5/9 13:00 ~ 26/5/11 23:59
 			</div>
 
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 
-			<div  onClick={openGuestSnap}	style={{
-				fontSize: '1.6rem',
-				lineHeight: '3rem',
-				diplay: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-				width: '9rem',
-				textAlign: 'center',
-				background: 'rgb(242,238,238)',
-				borderRadius: '1rem',
-				margin: '0 auto',
-				padding: '0.5rem',
-				fontFamily: 'Regular',
-				boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-				cursor: 'pointer',
-			}}>
+			<div className='button'  onClick={openGuestSnap}
+				style={{width: '15rem', margin: 'auto'}}>
 				사진 업로드
 			</div>
-			
-			<div className='space-box-4rem'/>
+		
+			<Space height={`${sectionHeight}rem`}/>
 
 		</div>	
 	)

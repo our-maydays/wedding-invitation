@@ -1,24 +1,25 @@
 import './App.css'
+import Space from './Space.jsx'
 
 import Transport from './Transport'
 import Route from './Route'
 import Map from './Map'
 
+const sectionHeight = 4
+const sectionDivide = 3
+
 const Location = () => {
 	return (
 		<div className='content-box'>
-
-			<div className='space-box-4rem'/>
+			
+			<Space height={`${sectionHeight}rem`}/>
 
 			<div className='section-subtitle'> L O C A T I O N </div>
-			<div className='section-title'>
-				오시는 길 
-			</div>
-			<div className='space-box-2rem'/>
-			<div style={{
-				margin: 0,
-				padding: 0,
-			}}>
+			<div className='section-title'>	오시는 길 </div>
+
+			<Space height={`${sectionDivide}rem`}/>
+
+			<div style={{	margin: 0,padding: 0}}>
 				<span className='bold-text' style={{fontSize: '1.6rem'}}>
 					영도 목장원	오필로스가든
 				</span>
@@ -32,15 +33,19 @@ const Location = () => {
 				</span>
 			</div>
 
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<Map/>
 			
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
+
 			<Route/>	
-			<div className='space-box-2rem'/>
+
+			<Space height={`${sectionDivide}rem`}/>
+
 			<Transport/>
-			<div className='space-box-4rem'/>
+
+			<Space height={`${sectionHeight}rem`}/>
 		</div>
 	)
 }

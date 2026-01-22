@@ -1,16 +1,32 @@
+.rsvp-title {
+	font-family: Regular;
+	font-size: 1.8rem;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	-webkit-text-stroke: 0.5px;
+	color: black;
+}
+
 .rsvp-question {
-	width: 80%;
+	font-family: Regular;
+	height: 2rem;
+	width: 90%;
 	font-size: 1.6rem;
 	text-align: left;
 	margin: 0 auto;
+	padding: 0;
+	line-height: 2rem;
+	color: black;
 }
 
 .rsvp-input {
 	font-family: Regular;
 	font-size: 1.6rem;
 	line-height: 1.6rem;
+	margin: 0 auto;
 	padding: 0.5rem;
-	height: 1.6rem;				 
+	height: 2rem;				 
 	border-radius: 0.8rem;
 	background-color: rgb(242,238,238);
 	border: none;
@@ -27,7 +43,7 @@
 .rsvp-toggle {
 	display: flex;
 	justify-content: space-between;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 }
 

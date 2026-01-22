@@ -1,5 +1,6 @@
 import './App.css'
 import './GuestBook.css'
+import Space from './Space'
 
 import { useState, useEffect, useRef } from 'react'
 import moment from 'moment'
@@ -15,6 +16,15 @@ const unlockIcon = `${import.meta.env.BASE_URL}/icon/unlock.svg`
 const editIcon = `${import.meta.env.BASE_URL}/icon/write.svg`
 const eraseIcon = `${import.meta.env.BASE_URL}/icon/erase.svg`
 const nameIcon = `${import.meta.env.BASE_URL}/icon/user.svg`
+
+const sectionHeight = 4
+const sectionDivide = 3
+const textHeight = 2
+const iconHeight = 3
+const buttonHeight = 4
+const sectionSpace = 1
+const messageHeight = 18
+const modalHeight = iconHeight + buttonHeight + sectionSpace + messageHeight + sectionSpace + buttonHeight + sectionSpace
 
 import Modal from 'react-modal'
 import { 
@@ -37,7 +47,6 @@ const hashPassword = (password) => {
 }
 
 const GuestBook = () => {
-	Modal.setAppElement('#root')
 	moment.locale('ko')
 	const [name, setName] = useState('')
 	const [content, setContent] = useState('')
@@ -263,11 +272,12 @@ const GuestBook = () => {
 			flexDirection: 'column',
 			alignItems: 'center'
 		}}>
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 
 			<div className='section-subtitle'>G U E S T B O O K</div>
 			<div className='section-title'>방명록</div>
-			<div className='space-box-2rem'/>
+
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='guestbook'>
 
@@ -310,7 +320,17 @@ const GuestBook = () => {
 				</div>
 			</div>
 
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
+
+			<div className='button'
+				onClick={() => setIsOpenNew(true) }
+				style={{width:'90%', paddingLeft:0, paddingRight:0}}
+			>
+				<img src={messageIcon} className='icon'/>
+					&nbsp;축하메세지 보내기
+			</div>
+
+			<Space height={`${sectionHeight}rem`}/>
 
 			{/* Update & Delete Modal */}
 
@@ -330,24 +350,21 @@ const GuestBook = () => {
 							left: '50%',
 							transform: 'translate(-50%,-50%)',
 							background: '#F8F7EE',
-							width: '80vw',
-							height: '40vh',
-							minWidth: '370px',
-							maxWidth: '400px',
-							minHeight: '280px',
-							maxHeight: '400px',
-							margin: '0',
-							padding: '0',
+							width: '390px',
+							height: `${modalHeight}rem`,
 							border: 'none',
-							borderRadius: '1.5rem',
+							borderRadius: '1rem',
+							margin: 0, padding: 0,
 						},
 					}}
 				>
-					<div style={{height: '100%', display:'flex',flexDirection: 'column',}}>
-						<div style={{display:'flex', justifyContent: 'right'}}>
-							<button
-								onClick={ closeModal}
-								style={{
+					<div style={{height: '100%'}}>
+						<div style={{
+							display:'flex', justifyContent: 'right',
+							height: `${iconHeight}rem`,
+							margin: 0, padding: 0,
+						}}>
+							<div onClick={closeModal} style={{
 									display: 'flex',
 									justifyContent: 'center',
 									alignItems: 'center',
@@ -355,34 +372,29 @@ const GuestBook = () => {
 									fontSize: '1.6rem',
 									border: 'none',
 									cursor: 'pointer',
-									margin: '1rem',
-									padding: '0',
-								}}
-							>
-								<img width={'25rem'} height={'25rem'} src={closeIcon}/>
-							</button>
+									marginRight: '1rem',
+								}}>
+								<img src={closeIcon} style={{height: '2rem'}}/>
+							</div>
 						</div>
 
 						<div style={{
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'space-between',
-							margin: '1rem',
-							marginTop: '0',
-							padding: '0',
-							position: 'relative',
-							height: '100%',
-							width: 'auto',
+							height: `${modalHeight-iconHeight}rem`,
 						}}>
 							{!isAuthorized ? (
 								<div 
 									style={{
+										width: '80%',
 										display: 'flex',
-										margin: 'auto',
 										alignItems: 'center',
 										justifyContents: 'center',
-										padding: '1rem',
-
+										position: 'absolute',
+										top: '50%',
+										left: '50%',
+										transform: 'translate(-50%,-50%)',	
 									}}
 								>
 									<div 
@@ -394,7 +406,6 @@ const GuestBook = () => {
 										}}
 									>
 										<div
-											type='button'
 											onClick={passwordShow}
 											style={{
 												margin: '0.5rem',
@@ -409,75 +420,63 @@ const GuestBook = () => {
 												src={show ? unlockIcon : lockIcon}
 											/>
 										</div>
-										<div className='passwordInput'
+										<textarea className='passwordInput'
 											type='password'
-											placeholder='비밀번호'
+											placeholder='비밀번호(숫자만 입력 가능)'
 											style={{
 												WebkitTextSecurity: show ? 'none' : 'disc'
 											}}
-											onChange={(e) => setInputPassword(e.target.value.replace(/[^a-z]/g,''))}
+											onChange={(e) => setInputPassword(e.target.value.replace(/[^0-9]/g,''))}
 											value={inputPassword}
 										/>
 									</div>
-									<button onClick={verifyPassword} style={{
-										lineHeight: '1.6rem',
-										display: 'flex',
-										justifyContent: 'center',
-										alignItems: 'center',
-										fontSize: '1.6rem',
-										fontFamily: 'Regular',
-										padding: '0.5rem',
-										background: 'rgb(242,238,238)',
-										boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-										border: 'none',
-										outline: 'none',
-										color: '#2F2359',
-									}}>
+									<div className='button' onClick={verifyPassword} style={{width: '6rem'}}>
 										<img src={loginIcon} className='icon'/>
-									</button>
+									</div>
 								</div>
 							) : (
-								<div style={{ width: '100%', height:'100%'}}>
+								<div style={{ width: '100%', height:`${modalHeight-iconHeight}rem`}}>
 									<div style={{
 										display: 'flex',
-										justifyContent: 'space-between',
+										justifyContent: 'flex-start',
 										alignItems:'center',
-										margin: '1rem',
-										marginTop:'0',
-										padding: '0',
-										position: 'relative',
+										marginLeft: '1rem', marginRight: '1rem',
+										height: `${buttonHeight}rem`,
 									}}>
 										<div style={{
 											display:'flex',
 											justifyContent: 'center',
 											alignItems: 'center',
+											marginRight: '0.5rem',
 										}}>
-										<img src={nameIcon} className='icon'/>
-										<div className='nameInput'
+											<img src={nameIcon} className='icon'/>
+										</div>
+										<textarea className='nameInput'
 											placeholder='이름'
 											onChange={ (e) => setEditName(e.target.value)}
 											value={editName}
+											style={{width: '40%'}}
 										/>
-										</div>
 									</div>
+
+									<Space height={`${sectionSpace}rem`}/>
 
 									<div style={{
 										display: 'flex',
 										justifyContent: 'space-between',
 										alignItems: 'center',
-										margin: '1rem',
-										marginTop: '1.5rem',
-										padding: '0',
-										position: 'relative',
-										height: '70%',
+										height: `${messageHeight}rem`,
+										marginLeft: '1rem', marginRight: '1rem',
 									}}>
-										<div className='messageInput'
-											rows= '1'
+										<textarea className='messageInput'
 											placeholder='메세지'
 											onChange={(e) => setEditContent(e.target.value)}
 											value={editContent}
+											style={{height: `${messageHeight-1}rem`}}
 										/>
 									</div>
+
+									<Space height={`${sectionSpace}rem`}/>
 
 									<div 
 										style={{
@@ -486,46 +485,24 @@ const GuestBook = () => {
 											alignItems: 'center',
 											marginTop: '1rem',
 											width: '70%',
+											height: `${buttonHeight}rem`,
 											margin: 'auto',
 										}}
 									>
-										<button onClick={handleUpdate} style={{
-											height: '3rem',
-											display: 'flex',
-											justifyContent: 'center',
-											alignItems: 'center',
-											background: 'rgb(242,238,238)',
-											boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-											fontSize: '1.6rem',
-											fontFamily: 'Regular',
-											margin: 0, 
-											padding: 0,
-											paddingLeft: '1rem',
-											paddingRight: '1rem',
-											color: 'black',
-										}}>
+										<div className='button'  onClick={handleUpdate} style={{width:'10rem'}}>
 											<img src={editIcon} className='icon'/>
 											&nbsp;수정하기
-										</button>
-										<button onClick={handleDelete} style={{
-											height: '3rem',
-											display:'flex',
-											justifyContent: 'center',
-											alignItems: 'center',
-											background: 'rgb(242,238,238)',
-											boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-											fontFamily:'Regular',
-											fontSize: '1.6rem',
-											margin: 0,
-											padding: 0,
-											paddingLeft: '1rem',
-											paddingRight: '1rem',
-											color: 'black',
-										}}> 
+										</div>
+
+										<div className='button' onClick={handleDelete} style={{width:'10rem'}}> 
 											<img src={eraseIcon} className='icon'/>
 											&nbsp;삭제하기
-										</button>
+										</div>
+
 									</div>
+
+									<Space height={`${sectionSpace}rem`}/>
+									
 								</div>
 							)}
 						</div>
@@ -533,33 +510,7 @@ const GuestBook = () => {
 				</Modal>
 			)}								
 
-
-
-			<button
-				style={{
-					fontSize: '1.6rem',
-					margin: 0,
-					background: 'rgb(242,238,238)',
-					lineHeight: '3rem',
-					width: '90%',
-					textAlign: 'center',
-					display: 'flex',
-					justifyContent: 'center',
-					alignItems: 'center',
-					borderRadius: '1rem',
-					padding: '0.5rem',
-					boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-					border: 'none',
-					outline: 'none',
-					color: 'black',
-				}}
-				onClick={() => setIsOpenNew(true) }
-			>
-				<img src={messageIcon} className='icon'/>
-					&nbsp;축하메세지 보내기
-			</button>
-
-			<div className='space-box-4rem'/>
+			{/* Send New Message Modal */}
 
 			<Modal 
 				isOpen={isOpenNew}
@@ -575,7 +526,7 @@ const GuestBook = () => {
 						transform: 'translate(-50%,-50%)',
 						background: '#F8F7EE',
 						width: '390px',
-						height: '330px',
+						height: `${modalHeight}rem`,
 						border: 'none',
 						margin: '0',
 						padding: '0',
@@ -584,34 +535,30 @@ const GuestBook = () => {
 				}}
 			>
 				<div style={{height: '100%'}}>
-					<div style={{display:'flex', justifyContent:'right'}}>
-						<button
-							onClick={closeNew}
-							style={{
-								display: 'flex',
-								alingItems: 'center',
-								justifyContent: 'center',
-								background: 'transparent',
-								color: 'white',
-								fontSize: '1.6rem',
-								border: 'none',
-								cursor: 'pointer',
-								margin: '1rem',
-								padding: '0',
-							}}
-						>
-							<img src={closeIcon} width={'25rem'} height={'25rem'}/>
-						</button>
+					<div style={{
+						display:'flex', justifyContent:'right',
+						height: `${iconHeight}rem`,
+					}}>
+						<div onClick={closeNew} style={{
+							display: 'flex',
+							alingItems: 'center',
+							flexDirection: 'column',
+							justifyContent: 'center',
+							background: 'transparent',
+							border: 'none',
+							cursor: 'pointer',
+							marginRight: '1rem',
+						}}>
+							<img src={closeIcon} style={{height: '2rem'}} />
+						</div>
 					</div>
 
 					<div style={{
 						display: 'flex',
 						justifyContent: 'space-between',
 						alignItems: 'center',
-						margin: '1rem',
-						marginTop: '0',
-						padding: '0',
-						position: 'relative',
+						marginLeft: '1rem', marginRight: '1rem',
+						height: `${buttonHeight}rem`,
 					}}>
 						<div style={{
 							display: 'flex',
@@ -622,19 +569,20 @@ const GuestBook = () => {
 							display: 'flex',
 							justifyContent:'center',
 							alignItems: 'center',
-							padding: 0,
-							margin: 0,
 							marginRight: '0.5rem',
 						}}>
 							<img src={nameIcon} className='icon'/>
 
 						</div>
-						<div className='nameInput'
+						<textarea className='nameInput'
 							placeholder='이름'
 							onChange={onChangeNameHandler}
 							value={name}
 						/>
 						</div>
+
+						<div style={{width:'2rem'}}/>
+
 						<div style={{
 							display: 'flex',
 							justifyContent: 'center',
@@ -644,8 +592,6 @@ const GuestBook = () => {
 							<div
 								onClick={passwordShow}
 								style= {{
-									margin: '0',
-									padding: '0',
 									display: 'flex',
 									alignItems: 'center',
 									justifyContent: 'center',
@@ -661,9 +607,9 @@ const GuestBook = () => {
 								/>
 							</div>
 
-						<div className='passwordInput'
+						<textarea className='passwordInput'
 							type='password'
-							placeholder='비밀번호'
+							placeholder='비밀번호(숫자만)'
 							style={{
 								WebkitTextSecurity: show ? 'none' : 'disc'
 							}}
@@ -674,53 +620,37 @@ const GuestBook = () => {
 							</div>
 					</div>
 
+					<Space height={`${sectionSpace}rem`}/>
+
 					<div style={{
 						display: 'flex',
 						justifyContent: 'space-between',
 						alignItems: 'center',
-						margin: '1rem',
-						marginTop: '1.5rem',
-						padding: '0',
-						height: '60%',
+						marginLeft: '1rem', marginRight: '1rem',
+						height: `${messageHeight}rem`,
 					}}>
-						<div className='messageInput'
-							rows='1'
+						<textarea className='messageInput'
 							placeholder='메세지를 작성해주세요'
 							onChange={onChangeContentHandler}
 							value={content}
+							style={{height: `${messageHeight-1}rem`}}
 						/>
 					</div>
+
+					<Space height={`${sectionSpace}rem`}/>
 					
-					<div
-						style={{
-							display:'flex',
-							justifyContent: 'center',
-						}}
-					>
-						<button onClick={onClickSubmitHandler} style={{
-							display:'flex',
-							justifyContent:'center',
-							alignItems:'center',
-							width:'10rem',
-							height:'3rem',
-							fontFamily:'Regular',
-							fontSize:'1.6rem',
-							lineHeight:'3rem',
-							padding: '0.5rem',
-							margin: '0.5rem',
-							marginTop: '0.5rem',
-							borderRadius: '1rem',
-							backgroundColor: 'rgb(243,238,238)',
-							boxShadow:'0 2px 4px rgba(0,0,0,0.1)',
-							outline: 'none',
-							border: 'none',
-							color: '#2F2359',
-						}}>
+					<div style={{display:'flex', justifyContent: 'center'}}>
+
+						<div className='button' onClick={onClickSubmitHandler} 
+							style={{width: '10rem', height:`${buttonHeight-1}rem`}}
+						>
 							<img src={sendIcon} className='icon'/>
 							&nbsp;전송하기
-						</button>
-					</div>
+						</div>
 
+					</div>
+				
+					<Space height={`${sectionSpace}rem`}/>
 
 				</div>
 			</Modal>

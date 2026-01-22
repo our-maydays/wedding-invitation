@@ -1,7 +1,3 @@
-//import nmapIcon from './assets/nmap.png'
-//import kmapIcon from './assets/kmap.png'
-//import tmapIcon from './assets/tmap.jpeg'
-
 const nmapIcon = `${import.meta.env.BASE_URL}icon/nmap.png`
 const kmapIcon = `${import.meta.env.BASE_URL}icon/kmap.png`
 const tmapIcon = `${import.meta.env.BASE_URL}icon/tmap.jpeg`

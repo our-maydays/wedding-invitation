@@ -1,11 +1,15 @@
 import './App.css'
 import './Notice.css'
+import Space from './Space'
+
+const sectionHeight = 4
+const sectionDivide = 3
 
 const Notice = () => {
 	return (
 
 		<div className='content-box'>
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 				<div className='notice-wrapper'>
 					<div className='notice-title'>
 	
@@ -34,7 +38,7 @@ const Notice = () => {
 				</div>
 			</div>
 			
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 
 		</div>
 	)

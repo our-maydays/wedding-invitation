@@ -1,20 +1,15 @@
 import './App.css'
+import Space from './Space'
+
 import { useEffect } from 'react'
 
+const kakaoIcon = `${import.meta.env.BASE_URL}icon/kakaotalk.png`
+const linkIcon = `${import.meta.env.BASE_URL}icon/link.png`
+
+const sectionHeight = 4
+const sectionDivide = 3
 
 const Share = () => {
-
-	const styles = {
-		button: {
-			width: '5rem',
-			margin: '0 auto',
-			padding: '0.5rem',
-			background: 'rgb(242,238,238)',
-			boxShadow: '0 2px 4px rgb(0,0,0,0.1)',
-			borderRadius: '0.8rem',
-			cursor: 'pointer',
-		}
-	}
 
 	const url = 'https://our-maydays.github.io/reactest2'
 
@@ -44,37 +39,35 @@ const Share = () => {
 		}
 	}
 
-
-
-
-
 	return (
 		<div className='content-box'>
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 
 			<div className='section-subtitle'> S H A R E </div>
 			<div className='section-title'> 공유하기 </div>
 
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div style={{
 				display:'flex',
-				justifyContent: 'center',
+				justifyContent: 'space-between',
 				alignItems:'center',
 				width: '90%',
 				margin: '0 auto',
 				padding: 0,
 			}}>
-				<div style={styles.button} onClick={() => {kakaoShare()}}>
-					카톡
+				<div className='button' onClick={() => {kakaoShare()}}>
+					<img src={kakaoIcon} style={{height:'2rem'}}/>
+					&nbsp; 카톡으로 공유하기
 				</div>
 				
-				<div onClick={shareUrl} style={styles.button}>
-					링크
+				<div onClick={shareUrl} className='button'>
+					<img src={linkIcon} style={{height: '2rem'}}/>
+					&nbsp; 	링크 복사하기
 				</div>
 			</div>
 
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 		</div>
 	)
 }

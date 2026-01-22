@@ -1,17 +1,20 @@
 import './App.css'
 import './Invitation.css'
+import Space from './Space.jsx'
 
 const Invitation = () => {
 
+	const sectionHeight = 4
+
 	return (
 		<div className='content-box'>
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 			<div className='section-subtitle'> I N V I T A T I O N </div>
-
 			<div className='section-title'>
 				저희만의 작은 축제에 여러분을 초대합니다
 			</div>
-			<div className='space-box-2rem'/>
+
+			<Space height={`${sectionHeight}rem`}/>
 
 			<div style={{
 				lineHeight: '3rem',
@@ -30,7 +33,7 @@ const Invitation = () => {
 				함께 기억하고 싶습니다<br/>
 			</div>
 
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 
 			<div className='box'>
 				<div className='parentname'> 강대원 </div>
@@ -51,7 +54,8 @@ const Invitation = () => {
 				<div className='sd'> 딸 </div>
 				<div className='namebox'> 유진</div><br/>
 			</div>
-			<div className='space-box-2rem'/>
+
+			<Space height={`${sectionHeight}rem`}/>
 			
 		</div>
 	)

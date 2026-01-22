@@ -1,10 +1,14 @@
 import './Calendar.css'
 import './App.css'
+import Space from './Space'
 
 import moment from 'moment'
 import 'moment/dist/locale/ko'
 
 import Dday from './Dday'
+
+const sectionHeight = 4
+const sectionDivide = 3
 
 const Calendar = () => {
 
@@ -49,7 +53,7 @@ const Calendar = () => {
 
 	return (
 		<div className='calendar-box' style={{background:'#F3E3B880'}}>
-		<div className='space-box-4rem'/>
+		<Space height={`${sectionHeight}rem`}/>
 			<p className='bold-text' style = {{
 				fontSize: '1.8rem', 
 				fontFamily: 'Bold',
@@ -69,7 +73,7 @@ const Calendar = () => {
 				토요일 오후 1시<br/>
 			</p>
 			
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 			
 			<hr style={{
 				outline: 'none',
@@ -108,11 +112,11 @@ const Calendar = () => {
 				padding: 0,
 			}}/>
 
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<Dday/>
 			
-			<div className='space-box-2rem'/>
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div style={{margin: 0, padding: 0}}> 
 				
@@ -149,7 +153,7 @@ const Calendar = () => {
 				)}
 			</div>
 			
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 		</div>
 	);
 };

@@ -11,9 +11,30 @@
 	display: inline-block;
 	font-family: Regular;
 	font-size: 1.6rem;
-	width: 14rem;
-	height: 1.6rem;
-	line-height: 1.6rem;
+	width: 100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	padding: 0.5rem;
+	color: black;
+	background-color: #F3E3B4;
+	border-radius: 0.8rem;
+	border: none;
+	outline: none;
+	&:focus {
+		outline: none;
+	}
+	&::placeholder {
+		color: gray;
+	}
+}
+
+.passwordInput {
+	display: inline-block;
+	font-family: Regular;
+	font-size: 1.6rem;
+	width: 100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
 	padding: 0.5rem;
 	color: black;
 	background-color: #F3E3B4;
@@ -37,26 +58,6 @@
 	height: 100%;
 	line-height: 1.6rem;
 	background-color: #BAD4B9;
-	border: none;
-	outline: none;
-	&:focus {
-		outline: none;
-	}
-	&::placeholder {
-		color: gray;
-	}
-}
-
-.passwordInput {
-	display: inline-block;
-	font-family: Regular;
-	font-size: 1.6rem;
-	width: 14rem;
-	height: 1.6rem;
-	line-height: 1.6rem;
-	padding: 0.5rem;
-	color: black;
-	background-color: #F3E3B4;
 	border-radius: 0.8rem;
 	border: none;
 	outline: none;
@@ -67,22 +68,23 @@
 		color: gray;
 	}
 }
-
 .nameOutput {
+	cursor: default;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	height: 1.4rem;
+	height: 1.6rem;
 	max-width: 10rem;
 	font-size: 1.4rem;
 	font-family: Regular;
-	line-height: 1.4rem;
+	line-height: 1.6rem;
 	padding: 0.1rem 0.5rem 0.1rem 0.5rem;
 	margin: 0.5rem 0.5rem 0rem 0.8rem;
 	text-align: left;
 }
 
 .dateOutput {
+	cursor: default;
 	min-width: 4.5rem;
 	height: 1.4rem;
 	padding: 0.1rem 0.5rem 0.1rem 0.5rem;
@@ -96,6 +98,7 @@
 }
 
 .messageOutput {
+	cursor: pointer;
 	display: inline-block;
 	float: left;
 	min-height: 1.6rem;

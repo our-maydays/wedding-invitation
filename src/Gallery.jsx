@@ -1,7 +1,8 @@
 import { useEffect, useState, useMemo } from "react";
 import Modal from 'react-modal'
 import './App.css'
-
+import './Gallery.css'
+import Space from './Space'
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -9,7 +10,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const closeIcon = `${import.meta.env.BASE_URL}icon/close_icon.svg`
 
-import './Gallery.css'
+const sectionHeight = 4
+const sectionDivide = 3
+const iconHeight = 2
 
 // src/assets/images에 있는 모든 이미지를 한번에 불러오기
 const imagePaths = import.meta.glob('./assets/images/*.{jpg,JPG}', {
@@ -83,7 +86,7 @@ const Gallery = () => {
 	})
 
 	const updateDots = (index) => {
-		const dotsUl = document.querySelector('.modal-container .slick-dots ul')
+		const dotsUl = document.querySelector('.modal-wrapper .slick-dots ul')
 		if (!dotsUl) return
 
 		const moveX = (containerWidth/2) - (index * dotWidth) - (dotWidth/2)
@@ -117,11 +120,12 @@ const Gallery = () => {
 
 	return (
 		<div className='content-box'>
-		<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 	
 			<div className='section-subtitle'> G A L L E R Y </div>
-			<div className='section-titl'> 사진첩</div>
-			<div className='space-box-2rem'/>
+			<div className='section-title'> 사진첩</div>
+
+			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='grid-wrapper'>
 				<Slider {...gridSettings}>
@@ -149,7 +153,7 @@ const Gallery = () => {
 				</Slider>
 			</div>
 
-			<div className='space-box-4rem'/>
+			<Space height={`${sectionHeight}rem`}/>
 
 			<Modal
 				isOpen={isOpen}
@@ -175,7 +179,30 @@ const Gallery = () => {
 				}}
 				>
 				
-					<div className='modal-container'>
+					<div className='modal-wrapper'>
+						<div style={{
+							display:'flex',justifyContent:'right',
+							height:`${iconHeight}rem`, width:'100%',
+							margin: 0, padding: 0,
+							position: 'absolute',
+							top: '1rem',
+						}}>
+						<div
+							onClick={ () => setIsOpen(false)}
+							style={{
+								display: 'flex',
+								justifyContent: 'center',
+								alignItems: 'center',
+								background: 'transparent',
+								border: 'none',
+								cursor: 'pointer',
+								marginRight: '0.5rem',
+								zIndex: 1,
+							}}
+						>
+							<img src={closeIcon} style={{height:'2rem'}}/>
+						</div>
+						</div>
 						<Slider {...modalSettings(currentIndex)} key={currentIndex}>
 							{images.map( (src, index) => (
 								<div key={index} className='modal-slide'>
@@ -191,23 +218,6 @@ const Gallery = () => {
 							))}
 						</Slider>
 						
-						<button
-							onClick={ () => setIsOpen(false)}
-							style={{
-								position: 'absolute',
-								top: '2rem',
-								right: '1rem',
-								background: 'transparent',
-								color: 'white',
-								fontSize: '1.6rem',
-								border: 'none',
-								cursor: 'pointer',
-								margin: '0',
-								padding: '0',
-							}}
-						>
-							<img src={closeIcon} width='25rem'/>
-						</button>
 
 					</div>
 				</Modal>
