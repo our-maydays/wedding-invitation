@@ -31,10 +31,9 @@ const RSVP = () => {
  	}
 
 	const [side, setSide] = useState(null)
-	const [attendance, setAttendance] = useState(true)
+	const [attendance, setAttendance] = useState('true')
 	const [name, setName] = useState('')
 	const [guests, setGuests] = useState(1)
-	const [loading, setLoading] = useState(false)
 
 	const handleSubmit = async () => {
 		if (!name.trim()) {
@@ -52,8 +51,11 @@ const RSVP = () => {
 			})
 
 			alert('참석 여부가 전달되었습니다')
+			setAttendance('')
+			setSide('')
 			setName('')
-			setGuests(0)
+			setGuests(1)
+			setIsOpen(false)
 		} catch (e) {
 			console.error(e)
 			alert('전송 중 오류가 발생했습니다')
@@ -113,7 +115,7 @@ const RSVP = () => {
 					},
 				}}
 			>
-
+				console.log({attendance})
 				<div style={{width: '100%', height: '100%'}}>
 					<div style={{
 						display:'flex', justifyContent: 'right',

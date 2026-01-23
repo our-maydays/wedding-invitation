@@ -52,7 +52,6 @@ const Video = () => {
 						objectFit: 'cover',
 					}}
 					controlsList="nodownload"
-					disablePicutreInPicture
 					onContextMenu={(e) => e.preventDefault()}
 					draggable={false}
 					onDragStart={(e) => e.preventDefault()}

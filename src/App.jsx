@@ -64,6 +64,10 @@ function App() {
 				</Intersect>
 
 				<Intersect className='fade-in'>
+					<RSVP/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
 					<Account/>
 				</Intersect>
 	
@@ -73,10 +77,6 @@ function App() {
 
 				<Intersect className='fade-in'>
 					<Notice/>
-				</Intersect>
-
-				<Intersect className='fade-in'>
-					<RSVP/>
 				</Intersect>
 
 				<Intersect className='fade-in'>
