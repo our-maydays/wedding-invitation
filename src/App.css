@@ -25,8 +25,8 @@ html.magnify {
 	font-family: Regular;
 	color: black;
 	width: 390px;
-	min-width: 390px;
-	max-width: 450px;
+	overflow-x: hidden;
+
 }
 
 ::-webkit-scrollbar {
