@@ -12,7 +12,6 @@ html, body {
 
 html {
 	font-size: 10px;
-	scrollbar-gutter: stable both-edges;
 }
 
 html.magnify {
@@ -25,8 +24,11 @@ html.magnify {
 	font-family: Regular;
 	color: black;
 	width: 390px;
-	overflow-x: hidden;
+}
 
+#wedding-invitation {
+	width: 100%;
+	overflow-x: clip;
 }
 
 ::-webkit-scrollbar {

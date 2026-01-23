@@ -22,7 +22,7 @@ function App() {
 	
 	const debug = process.env.NODE_ENV === 'development'?'solid':'none';
 	return (
-		<>
+		<div id='wedding-invitation'>
 			<div className='main-frame'>
 				<WeddingDay targetDate='2026-05-09'/>
 
@@ -107,7 +107,7 @@ function App() {
 					<FontSizeToggle/>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 
