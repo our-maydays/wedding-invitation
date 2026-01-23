@@ -98,7 +98,7 @@ const Route = () => {
 					style={{
 						height: '3rem',
 						display: 'inline-block',
-						marginRight: '1rem',
+						marginRight: '0.6rem',
 						borderRadius: '0.8rem',
 						}} 
 				/>
@@ -111,7 +111,7 @@ const Route = () => {
 					style={{
 						height: '3rem',
 						display: 'inline-block',
-						marginRight: '1rem',
+						marginRight: '0.6rem',
 						borderRadius: '0.8rem',
 					}}
 				/>
@@ -124,7 +124,7 @@ const Route = () => {
 					style={{
 						height: '3rem',
 						display: 'inline-block',
-						marginRight: '1rem',
+						marginRight: '0.6rem',
 						borderRadius: '0.8rem',
 					}}
 				/>
