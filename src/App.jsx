@@ -97,12 +97,12 @@ function App() {
 
 				<div style={{
 					position: 'sticky',
-					bottom: '1%',
+					bottom: '10px',
 					zIndex: 9,
 					display: 'flex',
 					justifyContent:'flex-end',
-					marginRight: '2%',
-					opacity: 0.5,
+					marginRight: '10px',
+
 				}}>
 					<FontSizeToggle/>
 				</div>

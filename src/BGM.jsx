@@ -133,9 +133,7 @@ const BGM = () => {
 			}}>
 			<img
 				src={isPlaying ? audioIconOn : audioIconOff}
-				style={{ 
-					width: '20px', 
-					height: '20px', 
+				style={{width: '25px', height: '25px', 
 				}}
 				onClick={() => handleAudioToggle()}
 			/>

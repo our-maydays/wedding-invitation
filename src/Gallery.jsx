@@ -185,7 +185,7 @@ const Gallery = () => {
 							height:`${iconHeight}rem`, width:'100%',
 							margin: 0, padding: 0,
 							position: 'absolute',
-							top: '1rem',
+							top: `${iconHeight}rem`,
 						}}>
 						<div
 							onClick={ () => setIsOpen(false)}

@@ -22,7 +22,7 @@ const FontSizeToggle = () => {
 		<div onClick={toggleFontSize} className='wrapper'>
 			<img
 				src={zoom ? zoomOutImg : zoomInImg}
-				style={{width: '25px', height:'25px'}}
+				style={{width: '20px', height:'20px'}}
 			/>
 		</div>
 	)
