@@ -12,6 +12,7 @@ html, body {
 
 html {
 	font-size: 10px;
+	scrollbar-gutter: stable both-edges;
 }
 
 html.magnify {
