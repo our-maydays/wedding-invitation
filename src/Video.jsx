@@ -51,6 +51,11 @@ const Video = () => {
 						height: '100%',
 						objectFit: 'cover',
 					}}
+					controlsList="nodownload"
+					disablePicutreInPicture
+					onContextMenu={(e) => e.preventDefault()}
+					draggable={false}
+					onDragStart={(e) => e.preventDefault()}
 				/>
 			</div>
 			<Space height={`${sectionHeight}rem`}/>

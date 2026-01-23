@@ -35,7 +35,7 @@ html.magnify {
 	display: none;
 }
 
-img {
+img, video {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	user-drag: none;

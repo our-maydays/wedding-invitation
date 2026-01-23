@@ -5,7 +5,8 @@ import Snowfall from 'react-snowfall'
 const sectionHeight = 4
 
 const mainphoto = `${import.meta.env.BASE_URL}photo/DSC07876.jpg`
-const sakura = `${import.meta.env.BASE_URL}icon/sakura.png`
+//const sakura = `${import.meta.env.BASE_URL}icon/sakura.png`
+const sakura = `${import.meta.env.BASE_URL}icon/leaf.png`
 
 const MainPhoto = () => {
 
