@@ -138,7 +138,8 @@ html.magnify .line-break::before {
 /*	font-family: Jaemin; */
 /*	font-family: SDChildfundKorea; */
 /*	font-family: Diphylleia; */
-	font-family: YeongdeokSea;
+/*	font-family: YeongdeokSea; */
+	font-family: KCCHanbit; {/* better than YeongdeokSea*/}
 	font-size: 1.4rem;
 	color: #F24822;
 	margin: 0 auto;
@@ -266,4 +267,24 @@ html.magnify .line-break::before {
 @font-face {
 	font-family: 'YeongdeokSea';
 	src: url('./assets/fonts/Yeongdeok Sea.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'KCCHanbit';
+	src: url('./assets/fonts/KCC-Hanbit.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'IropkeBatangM.otf';
+	src: url('./assets/fonts/IropkeBatangM.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'GabiaMaeumgyeol';
+	src: url('./assets/fonts/GabiaMaeumgyeol.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'HSBomBaram';
+	src: url('./assets/fonts/HSBombaram2.1.ttf') format('turetype');
 }
