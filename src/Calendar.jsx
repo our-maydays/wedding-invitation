@@ -10,6 +10,7 @@ import Dday from './Dday'
 const sectionHeight = 6
 const sectionDivide = 3
 const calendarSpace = 1
+const ddaySpace = 2
 const cw = '80%'
 
 const Calendar = () => {
@@ -120,7 +121,7 @@ const Calendar = () => {
 
 			<Dday/>
 			
-			<Space height={`${sectionDivide}rem`}/>
+			<Space height={`${ddaySpace}rem`}/>
 
 			<div style={{margin: 0, padding: 0}}> 
 				

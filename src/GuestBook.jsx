@@ -17,7 +17,7 @@ const editIcon = `${import.meta.env.BASE_URL}/icon/write.svg`
 const eraseIcon = `${import.meta.env.BASE_URL}/icon/erase.svg`
 const nameIcon = `${import.meta.env.BASE_URL}/icon/user.svg`
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 const textHeight = 2
 const iconHeight = 3
@@ -274,7 +274,7 @@ const GuestBook = () => {
 		}}>
 			<Space height={`${sectionHeight}rem`}/>
 
-			<div className='section-subtitle'>G U E S T B O O K</div>
+			<div className='section-subtitle'>GUESTBOOK</div>
 			<div className='section-title'>방명록</div>
 
 			<Space height={`${sectionDivide}rem`}/>

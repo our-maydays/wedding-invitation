@@ -6,7 +6,7 @@ import './App.css'
 import './Video.css'
 import Space from './Space'
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 
 const Video = () => {
@@ -27,7 +27,7 @@ const Video = () => {
 	return (
 		<div className='content-box'>
 			<Space height={`${sectionHeight}rem`}/>
-			<div className='section-subtitle'>V I D E O</div>
+			<div className='section-subtitle'>VIDEO</div>
 			<div className='section-title'>웨딩비디오</div>
 			<Space height={`${sectionDivide}rem`}/>
 

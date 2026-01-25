@@ -2,7 +2,7 @@ import './App.css'
 import './Notice.css'
 import Space from './Space'
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 
 const Notice = () => {
@@ -14,7 +14,7 @@ const Notice = () => {
 				<div className='notice-wrapper'>
 					<div className='notice-title'>
 	
-						<div className='section-subtitle'>N O T I C E</div>
+						<div className='section-subtitle'>NOTICE</div>
 						<div className='section-title'>안내사항</div>
 					</div>
 				<div className='notice-content'>

@@ -2,7 +2,7 @@ import './App.css'
 import './GuestSnap.css'
 import Space from './Space'
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 const photoUrl = `${import.meta.env.BASE_URL}image/DSC09510.jpg`
 
@@ -19,7 +19,7 @@ const GuestSnap = () => {
 
 			<Space height={`${sectionHeight}rem`}/>
 			
-			<div className='section-subtitle'> G U E S T S N A P </div>
+			<div className='section-subtitle'> GUESTSNAP</div>
 			<div className='section-title'> 게스트스냅 </div>
 
 			<Space height={`${sectionDivide}rem`}/>

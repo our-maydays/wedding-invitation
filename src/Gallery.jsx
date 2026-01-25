@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const closeIcon = `${import.meta.env.BASE_URL}icon/close_icon.svg`
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 const iconHeight = 2
 
@@ -122,7 +122,7 @@ const Gallery = () => {
 		<div className='content-box'>
 			<Space height={`${sectionHeight}rem`}/>
 	
-			<div className='section-subtitle'> G A L L E R Y </div>
+			<div className='section-subtitle'>GALLERY</div>
 			<div className='section-title'> 사진첩</div>
 
 			<Space height={`${sectionDivide}rem`}/>

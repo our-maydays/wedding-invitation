@@ -18,7 +18,7 @@ const RSVP = () => {
 	const textHeight = 2
 	const questionSpace = 1
 	const buttonHeight = 4
-	const sectionHeight = 4
+	const sectionHeight = 6
 	const sectionSpace = 3
 	const modalSectionSpace = 2
 
@@ -72,7 +72,7 @@ const RSVP = () => {
 	return ( 
 		<div className='content-box'>
 			<Space height={`${sectionHeight}rem`}/>
-			<div className='section-subtitle'> R. S. V. P. </div>
+			<div className='section-subtitle'> R.S.V.P.</div>
 			<div className='section-title'> 참석여부 </div>
 
 			<Space height={`${sectionSpace}rem`}/>

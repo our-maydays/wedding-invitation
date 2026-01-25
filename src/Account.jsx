@@ -4,7 +4,7 @@ import Space from './Space'
 import './App.css'
 import './Account.css'
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 
 const Account = () => {
@@ -14,7 +14,7 @@ const Account = () => {
 		<div className='content-box'>
 			<Space height={`${sectionHeight}rem`}/>
 
-			<div className='section-subtitle'>A C C O U N T</div>
+			<div className='section-subtitle'>ACCOUNT</div>
 			<div className='section-title'>마음 전하실 곳</div>
 			<Space height={`${sectionDivide}rem`}/>
 

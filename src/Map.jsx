@@ -39,11 +39,12 @@ const Map = () => {
 
 		const map = new naver.maps.Map(container, mapOptions)
 
-		const markerOptions = {
+			{/*
 			icon: {
 				url: markerImg,
 				scaledSize: new naver.maps.Size(40,40),
-			},
+			},*/}
+		const markerOptions = {
 			position: position.destinationPoint(0,0),
 			map: map,
 		}

@@ -5,7 +5,7 @@ import Transport from './Transport'
 import Route from './Route'
 import Map from './Map'
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 
 const Location = () => {
@@ -14,8 +14,8 @@ const Location = () => {
 			
 			<Space height={`${sectionHeight}rem`}/>
 
-			<div className='section-subtitle'> L O C A T I O N </div>
-			<div className='section-title'>	오시는 길 </div>
+			<div className='section-subtitle'>LOCATION</div>
+			<div className='section-title'>오시는 길</div>
 
 			<Space height={`${sectionDivide}rem`}/>
 

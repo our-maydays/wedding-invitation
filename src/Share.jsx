@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 const kakaoIcon = `${import.meta.env.BASE_URL}icon/kakaotalk.png`
 const linkIcon = `${import.meta.env.BASE_URL}icon/link.png`
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
 
 const Share = () => {
@@ -43,7 +43,7 @@ const Share = () => {
 		<div className='content-box'>
 			<Space height={`${sectionHeight}rem`}/>
 
-			<div className='section-subtitle'> S H A R E </div>
+			<div className='section-subtitle'>SHARE</div>
 			<div className='section-title'> 공유하기 </div>
 
 			<Space height={`${sectionDivide}rem`}/>
