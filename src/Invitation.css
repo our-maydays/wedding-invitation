@@ -18,7 +18,7 @@
 	width: 4.5rem;
 	display: flex;
 	justify-content: center;
-	-webkit-text-stroke: 0.5px black;
+	-webkit-text-stroke: 0.3px black;
 }
 
 html.magnify .parentname {
@@ -39,7 +39,7 @@ html.magnify .parentname {
 	width: 4rem;
 	display: flex;
 	justify-content: center;
-	-webkit-text-stroke: 0.5px black;
+	-webkit-text-stroke: 0.3px black;
 }
 
 .type {

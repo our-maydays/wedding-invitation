@@ -23,7 +23,7 @@ html.magnify {
 	text-align: center;
 	font-family: Regular;
 	color: black;
-	width: 390px;
+	width: 425px;
 }
 
 #wedding-invitation {
@@ -120,14 +120,15 @@ html.magnify .line-break::before {
 }
 
 .section-title {
-/*	font-family: Bold; 
-	font-size: 1.8rem; */
-	font-family: SDChildfundKorea;
+	font-family: Bold; 
+/*	font-size: 1.8rem;  */
+/*	font-family: SDChildfundKorea;*/
 	font-size: 2.2rem;
 	margin: 0;
 	padding: 0;
 	color: #2F2359;
-	-webkit-text-stroke: 0.5px #2F2359;
+	-webkit-text-stroke: 0.3px;
+
 	border: none;
 	outline: none;
 	forced-color-adjust: none;
@@ -135,17 +136,20 @@ html.magnify .line-break::before {
 }
 
 .section-subtitle {
-/*	font-family: Jaemin; */
+	font-family: Jaemin; 
 /*	font-family: SDChildfundKorea; */
 /*	font-family: Diphylleia; */
 /*	font-family: YeongdeokSea; */
-	font-family: KCCHanbit; {/* better than YeongdeokSea*/}
-	font-size: 1.4rem;
-	color: #F24822;
+/*	font-family: KCCHanbit; */{/* better than YeongdeokSea*/}
+	letter-spacing: 2.5px;
+	font-size: 1.5rem;
+	color: rgb(245,124,97);
 	margin: 0 auto;
+	margin-bottom: 0.7rem;
 	padding: 0;
 	outline: 0;
 	border: 0;
+	-webkit-text-stroke: 0.5px;
 	forced-color-adjust: none;
 	-webkit-forced-color-adjust: none;
 }

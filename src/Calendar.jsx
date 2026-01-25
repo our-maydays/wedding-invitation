@@ -7,8 +7,10 @@ import 'moment/dist/locale/ko'
 
 import Dday from './Dday'
 
-const sectionHeight = 4
+const sectionHeight = 6
 const sectionDivide = 3
+const calendarSpace = 1
+const cw = '80%'
 
 const Calendar = () => {
 
@@ -54,34 +56,34 @@ const Calendar = () => {
 	return (
 		<div className='calendar-box' style={{background:'#F3E3B880'}}>
 		<Space height={`${sectionHeight}rem`}/>
-			<p className='bold-text' style = {{
-				fontSize: '1.8rem', 
-				fontFamily: 'Bold',
-				margin: 0,
-				padding: 0,
-				color: '#2F2359',
+			<div className='section-title' style={{
 			}}>
 				2026. 5. 9.
-			</p>
-			<p style={{
-				fontSize: '1.4rem',
+			</div>
+			
+			<Space height={'0.7rem'}/>
+
+			<div style={{
+				fontSize: '1.6rem',
 				margin: 0,
 				padding: 0,
-				color: 'gray',
+				color: 'black',
 				}}
 			>
 				토요일 오후 1시<br/>
-			</p>
+			</div>
 			
 			<Space height={`${sectionDivide}rem`}/>
 			
 			<hr style={{
 				outline: 'none',
-				border: '0.5px solid gray',
+				border: '0.5px solid rgba(128,128,128,0.2)',
 				margin: '0 auto',
 				padding: 0,
-				width: '65%',
+				width: `${cw}`,
 			}}/>
+
+			<Space height={`${calendarSpace}rem`}/>
 
 			<div style={{
 				display: 'flex', 
@@ -90,7 +92,7 @@ const Calendar = () => {
 				padding: 0,
 				}}
 			>
-				<table className='calendar'>
+				<table className='calendar' style={{width:`${cw}`}}>
 					<thead>
 						<tr>
 							{daysOfWeek.map((day,index) => (
@@ -104,10 +106,12 @@ const Calendar = () => {
 				</table>
 			</div>
 			
+			<Space height={`${calendarSpace}rem`}/>
+
 			<hr style={{
 				outline: 'none',
-				border: '0.5px solid gray',
-				width: '65%',
+				border: '0.5px solid rgba(128,128,128,0.2)',
+				width: `${cw}`,
 				margin: '0 auto',
 				padding: 0,
 			}}/>

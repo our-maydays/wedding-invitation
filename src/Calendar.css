@@ -11,14 +11,14 @@
 }
 
 .calendar {
-	width: 65%;
 	height: 100%;
+	line-height: 3rem;
 	border-collapse: collapse;
 	margin: 0 auto;
 	padding: 0;
 }
 
-.calendar th, .calendar td {
+.calendar td {
 	text-align: center;
 	padding-bottom: 0.3rem;
 	padding-top: 0.3rem;
@@ -26,8 +26,17 @@
 	z-index: 1;			 
 }
 
+.calendar th {
+	text-align: center;
+	padding-bottom: 0.3rem;
+	padding-top: 0.3rem;
+	color: black;
+	z-index: 1;			 
+  -webkit-text-stroke: 0.3px;
+}
+
 .calendar .sunday {
-	color: rgba(255,0,0,0.568);
+	color: #E84D1F;
 }
 
 .calendar .special-day {
@@ -41,15 +50,15 @@
 	content: '.';
 	display: 'block';
 	background-image: url('/icon/heart.png');
-	background-size: 3rem;
+	background-size: 4rem;
 	background-repeat: no-repeat;
 	background-position: center;
 	color: transparent;
-	font-size: 1rem;
-	width: 3rem;
+	font-size: 0rem;
+	width: 4rem;
 	height: 3rem;
 	position: absolute;
-	top: 48%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: -1;
