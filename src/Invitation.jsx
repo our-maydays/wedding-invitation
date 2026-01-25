@@ -11,7 +11,7 @@ const Invitation = () => {
 			<Space height={`${sectionHeight}rem`}/>
 			<div className='section-subtitle'> I N V I T A T I O N </div>
 			<div className='section-title'>
-				저희만의 작은 축제에 여러분을 초대합니다
+				저희만의 작은 축제에 <span className='line-break'/> 여러분을 초대합니다
 			</div>
 
 			<Space height={`${sectionHeight}rem`}/>

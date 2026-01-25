@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Container as MapDiv, NaverMap, Marker, useNavermaps, InfoWindow } from 'react-naver-maps'
 import './App.css'
+const markerImg = `${import.meta.env.BASE_URL}icon/location.png`
 
 const {naver} = window;
 const Map = () => {
@@ -39,6 +40,10 @@ const Map = () => {
 		const map = new naver.maps.Map(container, mapOptions)
 
 		const markerOptions = {
+			icon: {
+				url: markerImg,
+				scaledSize: new naver.maps.Size(40,40),
+			},
 			position: position.destinationPoint(0,0),
 			map: map,
 		}
@@ -46,7 +51,7 @@ const Map = () => {
 		const marker = new naver.maps.Marker(markerOptions)
 	
 		const infoContent = [
-		  '<div className="iw_inner" style="padding:5px; line-height: 1.5;">',
+		  '<div className="iw_inner" style="padding:5px; line-height: 2.5rem;">',
  			'  <div className="bold-text" style="font-family: Bold; font-size: 1.6rem;"> 목장원 오필로스가든</div>',
  		  '  <div style="font-family: Regular; font-size: 1.6rem"> 부산시 영도구 절영로 355</div>',
 			'  <div style="font-family: Regular; font-size: 1.6rem"> 5월 9일 토요일 오후 1시</div>',
@@ -57,8 +62,7 @@ const Map = () => {
 			position: position.destinationPoint(0,0),
 			content: infoContent,
 			disableAnchor: false,
-			maxWidth: 200,
-			pixelOffset: new naver.maps.Point(-80,190),
+			pixelOffset: new naver.maps.Point(-50,180),
 		})
 
 		naver.maps.Event.addListener(marker, 'click', function(e) {

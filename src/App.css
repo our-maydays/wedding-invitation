@@ -110,9 +110,20 @@ img, video {
 	-webkit-forced-color-adjust: none;
 }
 
+.line-break::before {
+	content: " ";
+}
+
+html.magnify .line-break::before {
+	content: "\A";
+	white-space: pre;
+}
+
 .section-title {
-	font-family: Bold;
-	font-size: 1.8rem;
+/*	font-family: Bold; 
+	font-size: 1.8rem; */
+	font-family: SDChildfundKorea;
+	font-size: 2.2rem;
 	margin: 0;
 	padding: 0;
 	color: #2F2359;
@@ -124,7 +135,10 @@ img, video {
 }
 
 .section-subtitle {
-	font-family: Jaemin;
+/*	font-family: Jaemin; */
+/*	font-family: SDChildfundKorea; */
+/*	font-family: Diphylleia; */
+	font-family: YeongdeokSea;
 	font-size: 1.4rem;
 	color: #F24822;
 	margin: 0 auto;
@@ -229,8 +243,27 @@ img, video {
 	src: url('./assets/fonts/Jaemin.ttf') format('truetype');
 }
 
-	
+@font-face {
+	font-family: 'SDChildfundKorea';
+	src: url('./assets/fonts/SDChildfundkorea.otf') format('opentype');
+}
 
+@font-face {
+	font-family: 'GabiaGosran';
+	src: url('./assets/fonts/GabiaGosran.otf') format('opentype');
+}
 
+@font-face {
+	font-family: 'GabiaNull';
+	src: url('./assets/fonts/GabiaNull.otf') format('opentype');
+}
 
+@font-face {
+	font-family: 'Diphylleia';
+	src: url('./assets/fonts/Diphylleia-Regular.ttf') format('truetype');
+}
 
+@font-face {
+	font-family: 'YeongdeokSea';
+	src: url('./assets/fonts/Yeongdeok Sea.ttf') format('truetype');
+}

@@ -27,7 +27,7 @@ const MainPhoto = () => {
 			}}>
 				<Snowfall
 					speed={[0.2, 2]}
-					radius={[10,15]}
+					radius={[12,20]}
 					wind={[-0.5 ,2]} //[-0.5 2.0]
 					opacity={[0.6,0.7]}
 					style={{
