@@ -73,7 +73,7 @@ const RSVP = () => {
 		<div className='content-box'>
 			<Space height={`${sectionHeight}rem`}/>
 			<div className='section-subtitle'> R.S.V.P.</div>
-			<div className='section-title'> 참석여부 </div>
+			<div className='section-title'> 참석 여부 전달</div>
 
 			<Space height={`${sectionSpace}rem`}/>
 

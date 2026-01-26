@@ -35,7 +35,7 @@ const Video = () => {
 				style={{
 					margin: '0 auto',
 					padding: 0,
-					width: '90%',
+					width: '100%',
 					height: '100%',
 				}}
 			>

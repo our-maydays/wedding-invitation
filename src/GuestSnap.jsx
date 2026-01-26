@@ -19,15 +19,15 @@ const GuestSnap = () => {
 
 			<Space height={`${sectionHeight}rem`}/>
 			
-			<div className='section-subtitle'> GUESTSNAP</div>
-			<div className='section-title'> 게스트스냅 </div>
+			<div className='section-subtitle'> GUEST SNAP</div>
+			<div className='section-title'> 게스트 스냅 </div>
 
 			<Space height={`${sectionDivide}rem`}/>
 
 			<div style={{
 				lineHeight: '2.5rem'
 			}}>
-				📸 저희의 스냅 작가가 되어주세요 📸<br/><br/>
+				저희의 스냅 작가가 되어주세요 <br/><br/>
 
 				<div className='image-container'>
 					<img src={photoUrl}/>
@@ -42,7 +42,7 @@ const GuestSnap = () => {
 				5. 가족, 친구와 함께한 순간<br/>
 				6. 그 외 간직하고 싶은 순간들<br/><br/>
 
-				🎁 가장 센스있는 컷을 남겨주신 분들께 <br/>
+				 가장 센스있는 컷을 남겨주신 분들께 <br/>
 				저희의 마음을 담은 선물을 준비했어요<br/>
 
 				<br/>

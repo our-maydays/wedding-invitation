@@ -78,7 +78,7 @@ const Map = () => {
 
 	return (
 		<div style={{padding: 0, margin: 0}}>
-			<div id='map' style={{width:'90%', height:'250px',margin: '0 auto'}}> </div>
+			<div id='map' style={{width:'100%', height:'250px',margin: '0 auto'}}> </div>
 
 		</div>
 	)

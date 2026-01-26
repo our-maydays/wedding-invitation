@@ -41,7 +41,7 @@ const Transport = ( ) => {
 				시내버스
 			</div>
 			<div className='explain'>
-				6번, 7번, 70번, 71번, 508번 / 75광장 하차<br/>
+				6번, 7번, 70번, 71번, 508번 | 75광장 하차<br/>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
@@ -50,8 +50,8 @@ const Transport = ( ) => {
 				급행버스
 			</div>
 			<div className='explain'>
-				3003번(김해공항↔태종도) / 75광장 하차<br/>
-				<span className='notation'> * 사상역 / 파라곤호텔 승차</span>
+				3003번(김해공항↔태종도) | 75광장 하차<br/>
+				<span className='notation'> * 사상역 | 파라곤호텔 승차</span>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
