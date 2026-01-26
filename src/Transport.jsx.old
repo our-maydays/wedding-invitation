@@ -28,6 +28,7 @@ const Transport = ( ) => {
 		}}>
 			
 			<div className='name'>
+				<img className='icon' src={shuttleIcon} style={{paddingRight: '0.5rem'}}/>
 				 셔틀버스
 			</div>
 			<div className='explain'>
@@ -38,6 +39,7 @@ const Transport = ( ) => {
 			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='name'>
+				<img className='icon' src={busIcon} style={{paddingRight: '0.5rem'}}/>
 				시내버스
 			</div>
 			<div className='explain'>
@@ -47,6 +49,7 @@ const Transport = ( ) => {
 			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='name'>
+				<img className='icon' src={expressbusIcon} style={{paddingRight: '0.5rem'}}/>
 				급행버스
 			</div>
 			<div className='explain'>
@@ -57,6 +60,7 @@ const Transport = ( ) => {
 			<Space height={`${sectionDivide}rem`}/>
 			
 			<div className='name'>
+				<img className='icon' src={carIcon} style={{paddingRight: '0.5rem'}}/>
 				주차
 			</div>
 			<div className='explain'>

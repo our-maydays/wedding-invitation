@@ -131,11 +131,12 @@ const Gallery = () => {
 				<Slider {...gridSettings}>
 					{images.map( (src, index) => (
 						<div 
+							className= 'tet'
 							key={index} 
 							onClick={ (e) => {
 								openModal(index) 
 							}}
-							style={{display:'flex',justifyContent:'center',margin:'auto'}}
+							style={{display:'flex',justifyContent:'center', alignItems: 'center',outline: '2px solid red',}}
 						>
 							<div className='grid-item'>
 								<img

@@ -3,8 +3,15 @@
 }
 
 .grid-wrapper .slick-slide {
-	padding:0.5rem;
 	box-sizing: border-box;
+}
+
+.gird-wrapper .slick-slide .slick-active > div,
+.grid-wrapper .slick-slide .slick-active .slick-current > div {
+display: flex;
+height: 100%;
+				justify-content: center;
+				align-items: center;
 }
 
 .grid-wrapper .slick-dots {
@@ -41,7 +48,10 @@
 }
 
 .grid-item {
-	padding: 0;
+padding: 0rem;
+padding-left: 0.3rem;
+padding-right: 0.3rem;
+	box-sizing: border-box;
 }
 
 .grid-item img {
