@@ -12,7 +12,7 @@ export default function AccountAccordion({sectionKey, defaultOpen=false}) {
       key: 'groom',
       title: '신랑측',
       accounts: [
-        { name: '강대원', bank: '신한은행', number: '110-000-00000' },
+        { name: '강대원', bank: '우리은행', number: '1002-545-770512' },
         { name: '노신조', bank: '우리은행', number: '110-000-00000' },
         { name: '강경보', bank: '국민은행', number: '110-000-00000' },
       ],
@@ -21,9 +21,9 @@ export default function AccountAccordion({sectionKey, defaultOpen=false}) {
       key: 'bride',
       title: '신부측',
       accounts: [
-        { name: '장상문', bank: '하나은행', number: '110-000-00000' },
+        { name: '장상문', bank: '농협', number: '010-2656-4747-49' },
         { name: '한현순', bank: '카카오뱅크', number: '110-000-00000' },
-        { name: '장유진', bank: '농협', number: '110-000-00000' },
+        { name: '장유진', bank: '우리은행', number: '1002-457-422980' },
       ],
     },
   ]
