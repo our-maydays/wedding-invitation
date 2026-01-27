@@ -7,10 +7,12 @@
 	justify-content: center;
 	width: 9rem;
 	text-align: center;
-	background: rgb(242,238,238);
+/*	background: rgb(242,238,238); */
+	background: white;
 	border-radius: 1rem;
 	padding: 0.5rem;
 	font-family: Regular;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+border: 1px solid rgba(0,0,0,0.2);
+/*	box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
 
