@@ -23,7 +23,8 @@ html.magnify {
 	text-align: center;
 	font-family: Regular;
 	color: black;
-	width: 425px;
+	max-width: 425px;
+
 
 }
 
