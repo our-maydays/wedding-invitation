@@ -11,7 +11,7 @@ html, body {
 }
 
 html {
-	font-size: 10px;
+	font-size: 10px;;
 }
 
 html.magnify {
@@ -23,6 +23,7 @@ html.magnify {
 	text-align: center;
 	font-family: Regular;
 	color: black;
+width: 100%;
 	max-width: 425px;
 
 
@@ -156,7 +157,7 @@ html.magnify .line-break::before {
 	-webkit-forced-color-adjust: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 425px) {
 	.main-frame {
 		width: 100%;
 	}
