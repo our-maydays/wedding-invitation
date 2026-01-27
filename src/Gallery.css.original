@@ -1,20 +1,11 @@
 .grid-page {
-width: 100%;
+width: 100% !important;
 	display: grid !important;
-	grid-template-rows: repeat(2,1,fr);
 	grid-template-columns: repeat(2,1fr);
 	gap: 1rem;
-			 box-sizing: border-box;
 }
-
-.grid-wrapper .slick-slide > div {
-display: block;
-width: 100%;
-}
-
 
 .grid-cell {
-width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -25,6 +16,7 @@ position: relative;
 width: 100%;
 overflow: hidden;
 border-radius: 0.5rem;
+aspect-ratio: 3/4;
 }
 
 .image-wrapper img {
@@ -38,12 +30,16 @@ display: block;
 
 .grid-wrapper {
 	position: relative;
-width: 95%;
-	margin: auto;
 }
 
+.grid-wrapper .slick-slide {
+	box-sizing: border-box;
+}
 
-
+.grid-wrapper .slick-slide > div {
+display: block !important;
+width: 100%;
+}
 .grid-wrapper .slick-dots {
 	position: relative;
 	bottom: 0;
@@ -77,6 +73,18 @@ width: 95%;
 	line-height: 1rem;
 }
 
+.grid-item {
+padding: 0rem;
+padding-left: 0.3rem;
+padding-right: 0.3rem;
+	box-sizing: border-box;
+}
+
+.grid-item img {
+	width: 100%;
+	display: block;
+	border-radius: 0.5rem;
+}
 
 .modal-wrapper,
 .modal-wrapper .slick-slider,

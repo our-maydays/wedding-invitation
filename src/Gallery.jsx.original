@@ -31,14 +31,6 @@ const Gallery = () => {
 	const dotWidth = 15
 	const containerWidth = 75
 
-	const chunk = (arr, size) => {
-		const result = []
-		for (let i = 0; i < arr.length; i += size) {
-			result.push(arr.slice(i , i+size))
-		}
-		return result
-	}
-
 	const images = useMemo( () => {
 		return Object.values(imagePaths)
 	}, [])
@@ -69,9 +61,9 @@ const Gallery = () => {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		rows: 1,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		rows: 2,
 		arrows: false,
 	}
 
@@ -137,24 +129,26 @@ const Gallery = () => {
 
 			<div className='grid-wrapper'>
 				<Slider {...gridSettings}>
-					{chunk(images,4).map( (group, pageIndex) => (
-						<div className='grid-page' key={pageIndex}>
-							{group.map( (src,index) => (
-								<div
-									className='grid-cell'
-									key={index}
-									onClick={ () => openModal(pageIndex * 4 + index) }
-								>
-									<div className='image-wrapper'>
-										<img 
-											src = {src}
-											draggable={false}
-											onContextMenu={ (e) => e.preventDefault() }
-											onDragStart={ (e) => e.preventDefault() }
-										/>
-									</div>
-								</div>
-							))}
+					{images.map( (src, index) => (
+						<div 
+							className= 'tet'
+							key={index} 
+							onClick={ (e) => {
+								openModal(index) 
+							}}
+							style={{display:'flex',justifyContent:'center', alignItems: 'center',outline: '2px solid red',}}
+						>
+							<div className='grid-item'>
+								<img
+									src={src}
+									style={{
+										width: '100%',
+									}}
+									 onContextMenu={(e) => e.preventDefault()}
+      				     onDragStart={(e) => e.preventDefault()}
+ 			        	   draggable={false}
+								/>
+							</div>
 						</div>
 					))}
 				</Slider>
