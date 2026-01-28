@@ -9,12 +9,11 @@ const Notice = () => {
 	return (
 
 		<div className='content-box'>
-			<Space height={'2rem'}/>
-			<Space height={`${sectionHeight}rem`}/>
+			<Space height={`${sectionHeight/2}rem`}/>
 				<div className='notice-wrapper'>
 					<div className='notice-title'>
 	
-						<div className='section-title'>안내사항</div>
+						<div className='section-title' style={{color:'white'}}>안내사항</div>
 					</div>
 				<div className='notice-content'>
 							{/*	•❀ ☘︎ ☘︎ ✿ */}

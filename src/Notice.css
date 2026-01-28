@@ -10,9 +10,9 @@
 }
 
 .notice-title {
-	height: 5rem;
+	height: 4rem;
 	position: absolute;
-	top: -2.5rem;
+	top: -2rem;
 	left: 50%;
 	transform: translateX(-50%);
 	background: #F8F7EE;
@@ -24,6 +24,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+background: #BAD4B9;
+	border-radius: 4rem;
 }
 
 .notice-content {
@@ -32,7 +34,7 @@
 	font-size: 1.5rem;
 	line-height: 2.0rem;
 	margin-bottom: 2rem;
-	padding-left: 0.5rem;
+	padding: 2rem;
 }
 
 .notice-content p {
