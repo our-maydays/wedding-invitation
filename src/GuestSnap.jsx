@@ -17,10 +17,12 @@ const GuestSnap = () => {
 	return (
 		<div className='content-box'>
 
+			<Space height={`${sectionHeight}rem`}/>
 				<div className='image-container'>
 					<img src={photoUrl}/>
 				</div>
-			<Space height={`${sectionHeight}rem`}/>
+
+			<Space height={`${sectionDivide}rem`}/>
 			
 			<div className='section-subtitle'> GUEST SNAP</div>
 			<div className='section-title'> 게스트 스냅 </div>
@@ -35,9 +37,7 @@ const GuestSnap = () => {
 				
 				예식 당일 아래의 업로드 버튼을 통해 올려주세요<br/>
 
-				<Space height={`${sectionDivide}rem`}/>
 
-				<Space height={`${sectionDivide}rem`}/>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>

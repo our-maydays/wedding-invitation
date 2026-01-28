@@ -19,14 +19,22 @@ const Transport = ( ) => {
 			display: 'flex',
 			flexDirection: 'column',
 			justifyContent: 'flex-start',
-			alignItems: 'flex-start',
 			width: '90%',
 			margin: '0 auto',
 			marginTop: '0rem',
 			pading: 0,
 			height: '100%',
 		}}>
-			
+		
+			<div className='name'> 대절버스 </div>
+			<div className='explain'>
+				광주 00시 유스퀘어 출발<br/>
+				남원 00시 시외버스터미널 출발<br/>
+				영도 00시 출발<br/>
+			</div>
+
+			<Space height={`${sectionDivide}rem`}/>
+
 			<div className='name'>
 				 셔틀버스
 			</div>

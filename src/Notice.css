@@ -26,12 +26,13 @@
 	align-items: center;
 background: #BAD4B9;
 	border-radius: 4rem;
+outline: 5px solid #F8F7EE;
 }
 
 .notice-content {
 	text-align: left;
 	color: black;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	line-height: 2.0rem;
 	margin-bottom: 2rem;
 	padding: 2rem;

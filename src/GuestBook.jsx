@@ -289,7 +289,7 @@ const GuestBook = () => {
 						flexDirection: 'column-reverse',
 						overflowY: 'scroll',
 						width: '100%',
-						height: '399px',
+						height: '349px',
 					}}
 				>
 

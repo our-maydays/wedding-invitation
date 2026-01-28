@@ -52,18 +52,18 @@ const Share = () => {
 				display:'flex',
 				justifyContent: 'space-between',
 				alignItems:'center',
-				width: '32rem',
+				width: '35rem',
 				maxWidth: '390px',
 				margin: '0 auto',
 				padding: 0,
 			}}>
-				<div className='button' onClick={() => {kakaoShare()}}>
-					<img src={kakaoIcon} style={{height:'2rem'}}/>
+				<div className='button' style={{width:'16rem'}} onClick={() => {kakaoShare()}}>
+					<img src={kakaoIcon} style={{height:'2.2rem'}}/>
 					&nbsp; 카톡으로 공유하기
 				</div>
 				
-				<div onClick={shareUrl} className='button'>
-					<img src={linkIcon} style={{height: '2rem'}}/>
+				<div onClick={shareUrl} className='button' style={{width: '16rem'}}>
+					<img src={linkIcon} style={{height: '1.5rem'}}/>
 					&nbsp; 	링크 복사하기
 				</div>
 			</div>

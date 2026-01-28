@@ -86,12 +86,8 @@ function App() {
 					<Share/>
 				</Intersect>
 
-				<div style={{fontSize: '8px' }}>
-					build time : {import.meta.env.VITE_BUILD_TIME}
-				</div>
-				
 				<Intersect className='fade-in'>
-					Copyright: 경보 와 유진
+					Copyright: 경보 & 유진
 				</Intersect>
 
 				<div style={{

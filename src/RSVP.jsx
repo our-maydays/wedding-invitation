@@ -115,15 +115,18 @@ const RSVP = () => {
 					},
 				}}
 			>
-				console.log({attendance})
+
 				<div style={{width: '100%', height: '100%'}}>
 					<div style={{
-						display:'flex', justifyContent: 'right',
+						display:'flex', justifyContent: 'center',alignItems: 'center',
 						height: `${iconHeight}rem`, width:'100%',
 						margin: 0, padding: 0,
+						position: 'relative',
 					}}>
 
 						<div onClick={closeModal} style={{
+							position: 'absolute',
+							right: '1%',
 							display: 'flex',
 							justifyContent: 'center',
 							alignItems: 'center',
@@ -135,12 +138,12 @@ const RSVP = () => {
 						}}>
 							<img src={closeIcon} style={{height: '2rem'}}/>
 						</div>
-					</div>
 
 					<div className='rsvp-title'
-						style={{position:'absolute',top:0, right:'50%',transform:'translateX(50%)',
-							lineHeight:`${iconHeight}rem`	}}>
+							style={{lineHeight:`${iconHeight-1}rem`	}}>
 						참석 여부 전달	
+					</div>
+
 					</div>
 
 					<hr style={{outline: 'none', border: '0.5px solid gray', margin:0}}/>
@@ -151,7 +154,7 @@ const RSVP = () => {
 						margin:0, padding:0,
 					}}>
 
-					<div style={{width:'100%'}}>
+					<div style={{width:'100%', margin: 0, padding: 0}}>
 
 					<Space height={`${modalSectionSpace}rem`}/>
 					
