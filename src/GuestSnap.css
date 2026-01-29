@@ -6,7 +6,6 @@
 	margin: 0 auto;
 
 	background-color: #F8F7EE;
-	
 	-webkit-mask-image: linear-gradient(
 		to bottom,
 		transparent 0%,
@@ -19,7 +18,7 @@
 		transparent 0%,
 		black 20%,
 		black 80%,
-		transparent 100%
+		#F8F7EE00 100%
 	);
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
@@ -38,10 +37,23 @@ display: block;
 .image-container::before {
 content: '';
 position: absolute;
+top:0;
+right: 0;
+bottom: 0;
 left: 0;
 width: 100%;
 height: 100%;
 pointer-events: none
+}
+
+.image-container::after {
+	background: linear-gradient(
+		to bottom,
+		#F8F7EE 0%,
+		transparent 20%,
+		transparent 60%,
+		#F8F7EE 90%
+	)
 }
 
 .image-container::before {
@@ -53,4 +65,5 @@ pointer-events: none
 bottom: 0;
 				box-shadow: 0 30px 30px #F8F7EE inset;
 }
+
 */}

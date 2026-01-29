@@ -11,7 +11,7 @@
 	justify-content: left;
 	align-items: center;
 	-webkit-text-stroke: 0.3px;
-	line-height: 4rem;
+	line-height: 3.5rem;
 	color: #2F2359;
 color: #5E3E8C;
 }
@@ -24,10 +24,10 @@ color: #5E3E8C;
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
 	text-align: left;
-	line-height: 3rem;
+	line-height: 2.5rem;
 }
 
 .notation {

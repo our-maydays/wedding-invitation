@@ -28,7 +28,7 @@ const Transport = ( ) => {
 		
 
 			<div className='name'>
-				 셔틀버스 [부산역 → 목장원]
+				 셔틀버스&nbsp;  <span style={{lineHeight:'1.9rem',backgroundColor: '#F3E3B880'}}>[부산역 → 목장원]</span>
 			</div>
 			<div className='explain'>
 				부산역 토요코인호텔 앞 <span style={{textDecoration: 'underline'}}>12:00 출발</span> <br/>

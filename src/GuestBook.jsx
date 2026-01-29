@@ -320,14 +320,13 @@ const GuestBook = () => {
 				</div>
 			</div>
 
-			<Space height={`${sectionDivide}rem`}/>
+			<Space height={`${sectionDivide/2}rem`}/>
 
 			<div className='button'
 				onClick={() => setIsOpenNew(true) }
 				style={{width:'90%', paddingLeft:0, paddingRight:0}}
 			>
-				<img src={messageIcon} className='icon'/>
-					&nbsp;축하메세지 보내기
+					축하메세지 보내기
 			</div>
 
 			<Space height={`${sectionHeight}rem`}/>

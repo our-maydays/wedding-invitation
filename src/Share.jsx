@@ -41,12 +41,6 @@ const Share = () => {
 
 	return (
 		<div className='content-box'>
-			<Space height={`${sectionHeight}rem`}/>
-
-			<div className='section-subtitle'>SHARE</div>
-			<div className='section-title'> 공유하기 </div>
-
-			<Space height={`${sectionDivide}rem`}/>
 
 			<div style={{
 				display:'flex',
@@ -57,18 +51,19 @@ const Share = () => {
 				margin: '0 auto',
 				padding: 0,
 			}}>
-				<div className='button' style={{width:'16rem'}} onClick={() => {kakaoShare()}}>
+				<div className='button-noshadow' style={{width:'16rem', backgroundColor:'white',color:'black'}} onClick={() => {kakaoShare()}}>
 					<img src={kakaoIcon} style={{height:'2.2rem'}}/>
 					&nbsp; 카톡으로 공유하기
 				</div>
 				
-				<div onClick={shareUrl} className='button' style={{width: '16rem'}}>
+				<div onClick={shareUrl} className='button-noshadow' style={{width: '16rem', backgroundColor:'white',color:'black'}}>
 					<img src={linkIcon} style={{height: '1.5rem'}}/>
 					&nbsp; 	링크 복사하기
 				</div>
 			</div>
 
-			<Space height={`${sectionHeight}rem`}/>
+			<Space height={'2rem'}/>
+
 		</div>
 	)
 }
