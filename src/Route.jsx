@@ -93,7 +93,7 @@ const Route = () => {
 			margin: '0 auto',
 			padding: 0,
 		}}>
-			<div className='map-button' onClick={openNaverMap}>
+			<div className='button-noshadow' onClick={openNaverMap}>
 				<img src={nmapIcon}
 					style={{
 						height: '3rem',
@@ -105,11 +105,11 @@ const Route = () => {
 				네이버지도
 				</div>
 
-			<div className='map-button' onClick={openKakaoMap}>
+			<div className='button-noshadow'  onClick={openKakaoMap}>
 
 				<img src={kmapIcon}
 					style={{
-						height: '3rem',
+						height: '2.5rem',
 						display: 'inline-block',
 						marginRight: '0.6rem',
 						borderRadius: '0.8rem',
@@ -123,7 +123,7 @@ const Route = () => {
 
 				<img src={tmapIcon}
 					style={{
-						height: '3rem',
+						height: '2.5rem',
 						display: 'inline-block',
 						marginRight: '0.6rem',
 						borderRadius: '0.8rem',

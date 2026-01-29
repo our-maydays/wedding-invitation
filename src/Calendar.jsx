@@ -44,7 +44,7 @@ const Calendar = () => {
 				{week.map((day, index) => (
 					<td key={index} className={
 						(day.props.children  === target_day) ? 'special-day' 
-						: (index === 0) ? 'sunday' : ''}> 
+						: (index === 0) ? 'sunday' : `${day.props.children}`}> 
 						{day.props.children}
 					</td>
 				))}
@@ -97,7 +97,7 @@ const Calendar = () => {
 					<thead>
 						<tr>
 							{daysOfWeek.map((day,index) => (
-								<th key={index} className={index === 0 ? 'sunday' : ''}>{day}</th>
+								<th key={index} className={index === 0 ? 'sunday' : `${index}`}>{day}</th>
 							))}
 						</tr>
 					</thead>

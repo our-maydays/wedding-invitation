@@ -106,14 +106,12 @@ img, video {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	background: rgb(242,238,238);
-	background: #2F2359;
-	background: #A999C9;
+	background: white;
 	border-radius: 1rem;
 	padding: 0.5rem;
 	outline: none;
-	border: 0.5px solid gray;
-	color: white;
+	border: 0.5px solid rgba(180,180,180,1);
+	color: black;
 }
 
 

@@ -552,13 +552,11 @@ const GuestBook = () => {
 						</div>
 					</div>
 
-
 					<div style={{
 						display: 'flex',
 						justifyContent: 'space-between',
 						alignItems: 'center',
-						width: '90%',
-						margin: '0 auto',
+						marginLeft: '1rem', marginRight: '1rem',
 						height: `${buttonHeight}rem`,
 					}}>
 						<div style={{
@@ -572,6 +570,7 @@ const GuestBook = () => {
 							alignItems: 'center',
 							marginRight: '0.5rem',
 						}}>
+							<img src={nameIcon} className='icon'/>
 
 						</div>
 						<textarea className='nameInput'
@@ -601,6 +600,10 @@ const GuestBook = () => {
 									lineHeight: '1.6rem',
 								}}
 							>
+								<img 
+									src={show ? unlockIcon : lockIcon}
+									className='icon'
+								/>
 							</div>
 
 						<textarea className='passwordInput'
@@ -622,8 +625,7 @@ const GuestBook = () => {
 						display: 'flex',
 						justifyContent: 'space-between',
 						alignItems: 'center',
-						width: '90%',
-						margin: '0 auto',
+						marginLeft: '1rem', marginRight: '1rem',
 						height: `${messageHeight}rem`,
 					}}>
 						<textarea className='messageInput'
@@ -634,8 +636,6 @@ const GuestBook = () => {
 						/>
 					</div>
 
-
-
 					<Space height={`${sectionSpace}rem`}/>
 					
 					<div style={{display:'flex', justifyContent: 'center'}}>
@@ -643,7 +643,8 @@ const GuestBook = () => {
 						<div className='button' onClick={onClickSubmitHandler} 
 							style={{width: '90%', height:`${buttonHeight-1}rem`}}
 						>
-							전송하기
+							<img src={sendIcon} className='icon'/>
+							&nbsp;전송하기
 						</div>
 
 					</div>

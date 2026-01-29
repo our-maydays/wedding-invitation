@@ -14,13 +14,13 @@ Modal.setAppElement('#root')
 const RSVP = () => {
 
 	const buttonWidth = 16
-	const iconHeight = 4
+	const iconHeight = 5
 	const textHeight = 2
 	const questionSpace = 1
 	const buttonHeight = 4
 	const sectionHeight = 6
 	const sectionSpace = 3
-	const modalSectionSpace = 2
+	const modalSectionSpace = 3
 
 	const modalHeight = iconHeight + modalSectionSpace + (textHeight + questionSpace + buttonHeight + modalSectionSpace)*4 + buttonHeight + modalSectionSpace
 	
@@ -122,6 +122,7 @@ const RSVP = () => {
 						height: `${iconHeight}rem`, width:'100%',
 						margin: 0, padding: 0,
 						position: 'relative',
+						backgroundColor: '#F3E3B880',
 					}}>
 
 						<div onClick={closeModal} style={{
@@ -134,19 +135,18 @@ const RSVP = () => {
 							fontSize: '1.6rem',
 							border: 'none',
 							cursor: 'pointer',
-							marginRight: '0.5rem',
+							marginRight: '1rem',
 						}}>
 							<img src={closeIcon} style={{height: '2rem'}}/>
 						</div>
 
 					<div className='rsvp-title'
-							style={{lineHeight:`${iconHeight-1}rem`	}}>
+							style={{lineHeight:`${iconHeight-1}rem`}}>
 						참석 여부 전달	
 					</div>
 
 					</div>
 
-					<hr style={{outline: 'none', border: '0.5px solid gray', margin:0}}/>
 
 					<div style={{
 						display:'flex', alignItems:'center',justifyContent:'center',
@@ -222,7 +222,7 @@ const RSVP = () => {
 					<Space height={`${modalSectionSpace}rem`}/>
 
 					<div className='button' onClick={handleSubmit}
-						style={{width:'10rem', margin:'auto'}}> 전달 </div>
+						style={{width:'90%', margin:'auto'}}> 전달 </div>
 
 					<Space height={`${modalSectionSpace}rem`}/>
 
