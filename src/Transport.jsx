@@ -19,7 +19,7 @@ const Transport = ( ) => {
 			display: 'flex',
 			flexDirection: 'column',
 			justifyContent: 'flex-start',
-			width: '90%',
+			width: '85%',
 			margin: '0 auto',
 			marginTop: '0rem',
 			pading: 0,

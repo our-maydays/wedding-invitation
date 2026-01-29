@@ -85,12 +85,18 @@ img, video {
 	align-items: center;
 	text-align: center;
 	background: rgb(242,238,238);
+	background: #F3E3B880;
+	background: rgb(245,124,97);
+	background: #2F2359;
+background: #F3E3B4;
+background:						#BAD4B9;
 	border-radius: 1rem;
 	padding: 0.5rem;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 	outline: none;
 	border: none;
-	color: black;
+color: white;
+			 -webkit-text-stroke: 0.3px;
 }
 
 .button:focus,

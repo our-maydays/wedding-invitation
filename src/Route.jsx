@@ -86,10 +86,10 @@ const Route = () => {
 
 	return (
 		<div style={{
-			fontSize:'1.5rem', 
+			fontSize:'1.4rem', 
 			display: 'flex', 
 			justifyContent:'space-between', 
-			width: '90%',
+			width: '85%',
 			margin: '0 auto',
 			padding: 0,
 		}}>
@@ -102,8 +102,8 @@ const Route = () => {
 						borderRadius: '0.8rem',
 						}} 
 				/>
-				네이버
-			</div>
+				네이버지도
+				</div>
 
 			<div className='map-button' onClick={openKakaoMap}>
 
@@ -115,7 +115,8 @@ const Route = () => {
 						borderRadius: '0.8rem',
 					}}
 				/>
-				카카오
+				카카오맵
+			
 			</div>
 
 			<div className='map-button'	onClick={openTMap}>
