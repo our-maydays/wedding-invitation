@@ -26,20 +26,12 @@ const Transport = ( ) => {
 			height: '100%',
 		}}>
 		
-			<div className='name'> 대절버스 </div>
-			<div className='explain'>
-				광주 00시 유스퀘어 출발<br/>
-				남원 00시 시외버스터미널 출발<br/>
-				영도 00시 출발<br/>
-			</div>
-
-			<Space height={`${sectionDivide}rem`}/>
 
 			<div className='name'>
-				 셔틀버스
+				 셔틀버스 [부산역 → 목장원]
 			</div>
 			<div className='explain'>
-				부산역 토요코인호텔 앞 12시 출발<br/>
+				부산역 토요코인호텔 앞 <span style={{textDecoration: 'underline'}}>12:00 출발</span> <br/>
 				<span className='notation'>	* 편도 운행 </span>
 			</div>
 
@@ -49,7 +41,7 @@ const Transport = ( ) => {
 				시내버스
 			</div>
 			<div className='explain'>
-				6번, 7번, 70번, 71번, 508번 | 75광장 하차<br/>
+				6번, 7번, 70번, 71번, 508번  75광장 하차<br/>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
@@ -58,18 +50,35 @@ const Transport = ( ) => {
 				급행버스
 			</div>
 			<div className='explain'>
-				3003번(김해공항↔태종도) | 75광장 하차<br/>
-				<span className='notation'> * 사상역 | 파라곤호텔 승차</span>
+				3003번(김해공항 ↔ 태종도) | 75광장 하차<br/>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
 			
 			<div className='name'>
-				주차
+				자차
 			</div>
 			<div className='explain'>
-				약 150대 가능
+				목장원 내 주차 약 150대 가능<br/>
 			</div>
+
+			<Space height={`${sectionDivide}rem`}/>
+
+			<div className='name'> 전세버스 [광주 ↔ 남원 ↔ 목장원] </div>
+			<div className='explain'>
+				상행: 광주시청 주차장 <span style={{textDecoration:'underline'}}>8:00 출발 </span><br/>
+				&nbsp; &nbsp; &nbsp; &nbsp;	남원공설운동장 주차장 <span style={{textDecoration: 'underline'}}>9:00 출발</span> <br/>
+				하행: 목장원 <span style={{textDecoration:'underline'}}>15:30 출발</span> <br/>
+			<Space height={`${sectionDivide/2}rem`}/>
+
+			<div className='notation'>
+				* 출발 10분전 탑승 부탁드립니다<br/>
+				* 복귀 시간은 현장 사정에 따라 조정될 수 있습니다<br/>
+			</div>
+
+
+			</div>
+
 		</div>
 	)
 }

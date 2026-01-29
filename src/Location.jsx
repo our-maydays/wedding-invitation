@@ -28,8 +28,6 @@ const Location = () => {
 					부산광역시 영도구 절영로 355
 				</span>
 				<br/>
-				<span style={{fontSize: '1.2rem', color: 'gray'}}>
-				</span>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
