@@ -19,7 +19,7 @@ const Invitation = () => {
 
 			<div style={{
 				lineHeight: '3rem',
-				fontSize: '1.65rem',
+				fontSize: '1.7rem',
 				padding: 0,
 				margin: 0,
 				outline: 'none',
