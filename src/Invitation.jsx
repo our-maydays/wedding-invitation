@@ -19,13 +19,13 @@ const Invitation = () => {
 
 			<div style={{
 				lineHeight: '3rem',
-				fontSize: '1.6rem',
+				fontSize: '1.65rem',
 				padding: 0,
 				margin: 0,
 				outline: 'none',
 				border: 'none',
 			}}>	
-				벚꽃이 지는 봄날,<br/> 처음 만난 인연이 4년이 지나 <br/>
+				벚꽃이 지는 봄날, 처음 만난 인연이 <br/>4년을 지나 
 				같은 계절에 이르렀습니다 <br/><br/>
 				벚꽃이 지고 새싹이 돋아나는 이 순간처럼<br/>
 				닮은 듯 다른 두 사람이 함께  손을 잡고 <br/>

@@ -11,6 +11,7 @@
 
 .notice-title {
 	height: 4rem;
+width: 15rem;
 	position: absolute;
 	top: -2rem;
 	left: 50%;
@@ -26,7 +27,6 @@
 	align-items: center;
 background: #BAD4B9;
 	border-radius: 4rem;
-outline: 5px solid #F8F7EE;
 }
 
 .notice-content {

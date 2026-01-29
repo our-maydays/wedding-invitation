@@ -9,7 +9,7 @@ const Notice = () => {
 	return (
 
 		<div className='content-box'>
-			<Space height={`${sectionHeight/2}rem`}/>
+			<Space height={`${sectionHeight}rem`}/>
 				<div className='notice-wrapper'>
 					<div className='notice-title'>
 	
