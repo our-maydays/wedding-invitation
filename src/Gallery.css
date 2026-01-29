@@ -24,7 +24,7 @@ align-items: center;
 position: relative;
 width: 100%;
 overflow: hidden;
-border-radius: 0.5rem;
+border-radius: 0.3rem;
 }
 
 .image-wrapper img {
