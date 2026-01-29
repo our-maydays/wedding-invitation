@@ -19,12 +19,13 @@ const nameIcon = `${import.meta.env.BASE_URL}/icon/user.svg`
 
 const sectionHeight = 6
 const sectionDivide = 3
-const textHeight = 2
-const iconHeight = 3
+const textHeight = 3
+const iconHeight = 5
 const buttonHeight = 4
-const sectionSpace = 1
+const sectionSpace = 1.5
 const messageHeight = 18
-const modalHeight = iconHeight + buttonHeight + sectionSpace + messageHeight + sectionSpace + buttonHeight + sectionSpace
+
+const modalHeight = iconHeight + textHeight + sectionSpace + messageHeight + sectionSpace + buttonHeight + sectionDivide
 
 import Modal from 'react-modal'
 import { 
@@ -442,14 +443,6 @@ const GuestBook = () => {
 										marginLeft: '1rem', marginRight: '1rem',
 										height: `${buttonHeight}rem`,
 									}}>
-										<div style={{
-											display:'flex',
-											justifyContent: 'center',
-											alignItems: 'center',
-											marginRight: '0.5rem',
-										}}>
-											<img src={nameIcon} className='icon'/>
-										</div>
 										<textarea className='nameInput'
 											placeholder='이름'
 											onChange={ (e) => setEditName(e.target.value)}
@@ -483,19 +476,17 @@ const GuestBook = () => {
 											justifyContent: 'space-between',
 											alignItems: 'center',
 											marginTop: '1rem',
-											width: '70%',
+											width: '95%',
 											height: `${buttonHeight}rem`,
 											margin: 'auto',
 										}}
 									>
-										<div className='button'  onClick={handleUpdate} style={{width:'10rem'}}>
-											<img src={editIcon} className='icon'/>
-											&nbsp;수정하기
+										<div className='button'  onClick={handleUpdate} style={{width:'18rem'}}>
+											수정
 										</div>
 
-										<div className='button' onClick={handleDelete} style={{width:'10rem'}}> 
-											<img src={eraseIcon} className='icon'/>
-											&nbsp;삭제하기
+										<div className='button' onClick={handleDelete} style={{width:'18rem'}}> 
+											삭제
 										</div>
 
 									</div>
@@ -552,14 +543,13 @@ const GuestBook = () => {
 						</div>
 					</div>
 
-
 					<div style={{
 						display: 'flex',
 						justifyContent: 'space-between',
 						alignItems: 'center',
 						width: '90%',
 						margin: '0 auto',
-						height: `${buttonHeight}rem`,
+						height: `${textHeight}rem`,
 					}}>
 						<div style={{
 							display: 'flex',
@@ -570,7 +560,6 @@ const GuestBook = () => {
 							display: 'flex',
 							justifyContent:'center',
 							alignItems: 'center',
-							marginRight: '0.5rem',
 						}}>
 
 						</div>
@@ -595,7 +584,6 @@ const GuestBook = () => {
 									display: 'flex',
 									alignItems: 'center',
 									justifyContent: 'center',
-									marginRight: '0.5rem',
 									outline: 'none',
 									border: 'none',
 									lineHeight: '1.6rem',
@@ -630,7 +618,7 @@ const GuestBook = () => {
 							placeholder='메세지를 작성해주세요'
 							onChange={onChangeContentHandler}
 							value={content}
-							style={{height: `${messageHeight-1}rem`}}
+							style={{height: `${messageHeight-1}rem`, width:'100%'}}
 						/>
 					</div>
 
@@ -641,14 +629,14 @@ const GuestBook = () => {
 					<div style={{display:'flex', justifyContent: 'center'}}>
 
 						<div className='button' onClick={onClickSubmitHandler} 
-							style={{width: '90%', height:`${buttonHeight-1}rem`}}
+							style={{width: '90%', height:`${buttonHeight}rem`}}
 						>
-							전송하기
+							전송
 						</div>
 
 					</div>
 				
-					<Space height={`${sectionSpace}rem`}/>
+					<Space height={`${sectionDivide}rem`}/>
 
 				</div>
 			</Modal>

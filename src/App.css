@@ -61,7 +61,7 @@ img, video {
 	border: none;
 	margin: 0;
 	padding: 0;
-/*outline: 1px solid gray;*/
+					 {/*outline: 1px solid gray;*/}
 }
 
 .content-box {
@@ -75,7 +75,7 @@ img, video {
 }
 
 .button {
-	height: 3rem;
+	height: 4rem;
 	cursor: pointer;
 	font-family: Regular;
 	font-size: 1.6rem;
@@ -94,6 +94,7 @@ img, video {
 	border: none;
 	color: white;
 	-webkit-text-stroke: 0.3px;
+	box-sizing: border-box;
 }
 
 .button-noshadow {
