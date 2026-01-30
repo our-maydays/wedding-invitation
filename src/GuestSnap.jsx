@@ -18,11 +18,7 @@ const GuestSnap = () => {
 		<div className='content-box'>
 
 			<Space height={`${sectionHeight}rem`}/>
-				<div className='image-container'>
-					<img src={photoUrl}/>
-				</div>
 
-			<Space height={`${sectionDivide}rem`}/>
 			
 			<div className='section-subtitle'> GUEST SNAP</div>
 			<div className='section-title'> 게스트 스냅 </div>
@@ -52,6 +48,10 @@ const GuestSnap = () => {
 				업로드 기한: 26/5/11 23:59까지
 			</div>
 
+			<Space height={`${sectionDivide*2}rem`}/>
+				<div className='image-container'>
+					<img src={photoUrl}/>
+				</div>
 		
 			<Space height={`${sectionHeight}rem`}/>
 

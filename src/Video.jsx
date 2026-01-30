@@ -1,5 +1,6 @@
-const myVideo = `${import.meta.env.BASE_URL}video/test.mov`
-const myPoster = `${import.meta.env.BASE_URL}video/test.png`
+// const myVideo = `${import.meta.env.BASE_URL}video/test.mov`
+//const myVideo = './assets/videos/video.mp4'
+const myVideo = `${import.meta.env.BASE_URL}video/video.mp4`
 
 import {useRef} from 'react'
 import './App.css'

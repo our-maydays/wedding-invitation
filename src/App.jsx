@@ -51,15 +51,15 @@ function App() {
 				</Intersect>
 
 				<Intersect className='fade-in'>
-					<Location/>
-				</Intersect>
-
-				<Intersect className='fade-in'>
 					<Gallery/>
 				</Intersect>
 
 				<Intersect className='fade-in'>
 					<Video/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Location/>
 				</Intersect>
 
 				<Intersect className='fade-in'>
@@ -70,6 +70,12 @@ function App() {
 					<Account/>
 				</Intersect>
 	
+
+
+
+				<Intersect className='fade-in'>
+					<GuestSnap/>
+				</Intersect>
 				<Intersect className='fade-in'>
 					<GuestBook/>
 				</Intersect>
@@ -77,17 +83,12 @@ function App() {
 				<Intersect className='fade-in'>
 					<Notice/>
 				</Intersect>
-
-				<Intersect className='fade-in'>
-					<GuestSnap/>
-				</Intersect>
-
 				<Intersect className='fade-in'>
 					<Share/>
 				</Intersect>
 
 				<Intersect className='fade-in'>
-					Copyright: 경보 & 유진
+					Copyright 경보&유진
 				</Intersect>
 
 				<div style={{
