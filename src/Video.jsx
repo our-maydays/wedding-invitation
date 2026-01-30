@@ -3,7 +3,7 @@
 const myVideo = `${import.meta.env.BASE_URL}video/video.mov`
 
 
-import {useRef} from 'react'
+import {useRef, useEffect, useState} from 'react'
 import './App.css'
 import './Video.css'
 import Space from './Space'
@@ -14,6 +14,25 @@ const sectionDivide = 3
 const Video = () => {
 
 	const videoRef = useRef(null)
+	const [load,setLoad] = useState(false)
+	const ref = useRef(null)
+
+	useEffect( () => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setLoad(true)
+					observer.disconnect()
+				}
+			},
+			{threshold: 0.1}
+		)
+
+		if (ref.current) observer.observe(ref.current)
+
+		return () => observer.disconnect();
+
+	}, [])
 	
 	const togglePlay = () => {
 		const video = videoRef.current
@@ -33,7 +52,7 @@ const Video = () => {
 			<div className='section-title'>웨딩비디오</div>
 			<Space height={`${sectionDivide}rem`}/>
 
-			<div className='video-wrapper'
+			<div className='video-wrapper' ref={ref}
 				style={{
 					margin: '0 auto',
 					padding: 0,
@@ -41,6 +60,7 @@ const Video = () => {
 					height: '100%',
 				}}
 			>
+				{load && (
 				<video 
 					ref={videoRef}
 					id='myVideo' 
@@ -58,6 +78,7 @@ const Video = () => {
 					draggable={false}
 					onDragStart={(e) => e.preventDefault()}
 				/>
+				)}
 			</div>
 			<Space height={`${sectionHeight}rem`}/>
 		</div>
