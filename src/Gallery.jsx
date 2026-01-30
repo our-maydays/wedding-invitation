@@ -15,7 +15,7 @@ const sectionDivide = 3
 const iconHeight = 2
 
 // src/assets/images에 있는 모든 이미지를 한번에 불러오기
-const imagePaths = import.meta.glob('./assets/images/*.{jpg,JPG}', {
+const imagePaths = import.meta.glob('./assets/photo/*.{jpg,JPG}', {
 //const imagePaths = import.meta.glob('/photo/*.{jpg,JPG}',{
 	eager: true,
 	query: '?url',

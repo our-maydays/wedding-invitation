@@ -66,7 +66,7 @@ const Video = () => {
 					id='myVideo' 
 //					poster={myPoster}
 					preload='metadata'
-					src={`${myVideo}#t=0.001`}
+					src={`${myVideo}#t=0.5`}
 					controls
 					style={{
 						width: '100%',
