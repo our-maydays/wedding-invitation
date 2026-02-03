@@ -1,29 +1,33 @@
 .first-photo-container {
 position: fixed;
 top:0;
-left: 0;
-/*width: 100vw; */
-height: 100vh;
+left:0;
+width: 100vw;
+			height: 100vh;
 	background-color: #F8F6EE;
 display:flex;
 justify-content: center;
 align-items: center;
 z-index:9999;
 animation: firstPhotoFade 5s ease-in-out forwards;
+overflow: hidden;
 }
 
 .first-photo-content {
 width: 100%;
 height: 100%;
 overflow: hidden;
-position: relative;
+					justify-content: center;
+					align-items: center;
+margin: 0 auto;
 }
 
 
 .first-photo {
 height: 100%;	
-width: 100%;
-			 object-fit: cover;
+width: auto;
+margin:0 auto;
+			 object-fit: contain;
 	animation: firstPhotoZoom 5s ease-in-out forwards;
 	
 }
