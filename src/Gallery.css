@@ -4,6 +4,7 @@ width: 100%;
 	 	grid-template-rows: repeat(2,1fr);
 	grid-template-columns: repeat(2,1fr);
 	gap: 0.4rem;
+padding: 0.2rem;
 			 box-sizing: border-box;
 	grid-auto-flow: column;
 height: 100%;
