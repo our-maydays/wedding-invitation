@@ -1,0 +1,47 @@
+.first-photo-container {
+position: fixed;
+top:0;
+left: 0;
+width: 100vw;
+height: 100vh;
+	background-color: #F8F6EE;
+display:flex;
+justify-content: center;
+align-items: center;
+z-index:9999;
+animation: firstPhotoFade 5s ease-in-out forwards;
+}
+
+.first-photo-content {
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: relative;
+}
+
+
+.first-photo {
+height: 100%;	
+width: 100%;
+			 object-fit: cover;
+	animation: firstPhotoZoom 5s ease-in-out forwards;
+	
+}
+
+@keyframes firstPhotoZoom {
+	0% {transform: scale(1); }
+	50% {transform: scale(1.05); }
+	100% {transform: scale(1.1); }
+}
+
+@keyframes firstPhotoFade {
+	0% {opacity: 0}
+	50% {opacity: 1}
+	100% {opacity: 0}
+}
+
+.first-photo-container.fade-out {
+opacity: 0;
+}
+
+

@@ -5,20 +5,20 @@
 	position: relative;
 	margin: 0 auto;
 
-	background-color: #F8F7EE;
+	background-color: #F8F6EE;
 	-webkit-mask-image: linear-gradient(
 		to bottom,
-		transparent 0%,
+		#F8F6EE00 0%,
 		black 20%,
 		black 80%,
-		transparent 100%
+		#F8F6EE00 100%
 	);
 	mask-image: linear-gradient(
 		to bottom,
-		transparent 0%,
+		#F8F6EE00 0%,
 		black 20%,
 		black 80%,
-		#F8F7EE00 100%
+		#F8F6EE00 100%
 	);
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;

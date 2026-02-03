@@ -1,6 +1,7 @@
 import './App.css'
 
 import Intersect from './Intersect'
+import FirstImage from './FirstImage'
 import BGM from './BGM'
 import WeddingDay from './WeddingDay'
 import MainPhoto from './MainPhoto'
@@ -14,21 +15,32 @@ import GuestBook from './GuestBook'
 import Notice from './Notice'
 import RSVP from './RSVP'
 import GuestSnap from './GuestSnap'
+import LastImage from './LastImage'
 import Share from './Share'
 import FontSizeToggle from './FontSizeToggle'
+
+import { useState, useEffect } from 'react'
 
 function App() {
 	
 	const debug = process.env.NODE_ENV === 'development'?'solid':'none';
+
+
 	return (
 		<div id='wedding-invitation'>
+
+			<FirstImage/>
+
 			<div className='main-frame'>
+
+
 				<WeddingDay targetDate='2026-05-09'/>
 
 				<div style={{
 					textAlign: 'right', 
 					position: 'sticky', 
-					top: 0,
+					top: '10px',
+					marginRight: '10px',
 					zIndex: 9,
 				}}>
 					<BGM/>
@@ -70,9 +82,6 @@ function App() {
 					<Account/>
 				</Intersect>
 	
-
-
-
 				<Intersect className='fade-in'>
 					<GuestSnap/>
 				</Intersect>
@@ -83,6 +92,11 @@ function App() {
 				<Intersect className='fade-in'>
 					<Notice/>
 				</Intersect>
+
+				<Intersect className='fade-in'>
+					<LastImage/>
+				</Intersect>
+
 				<Intersect className='fade-in'>
 					<Share/>
 				</Intersect>
@@ -103,6 +117,7 @@ function App() {
 					<FontSizeToggle/>
 				</div>
 			</div>
+
 		</div>
 	)
 }

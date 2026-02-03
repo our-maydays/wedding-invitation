@@ -134,14 +134,27 @@ img, video {
 	box-sizing: border-box;
 	forced-color-adjust: none;
 	-webkit-forced-color-adjust: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	animation: mainFrameFadeIn 2.5s ease-in-out 2.5s both;
+}
+
+@keyframes mainFrameFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .line-break::before {
-	content: " ";
+	content: "";
 }
 
 html.magnify .line-break::before {
-	content: "\A";
+	content: "";
 	white-space: pre;
 }
 
@@ -173,14 +186,11 @@ color: #5E3E8C;
 	letter-spacing: 2.5px;
 	font-size: 1.5rem;
 	color: rgb(245,124,97);
-color: #F24822;
-	color: rgb(245,124,97);
 	margin: 0 auto;
-	margin-bottom: 0.7rem;
 	padding: 0;
 	outline: 0;
 	border: 0;
-	-webkit-text-stroke: 0.5px;
+	-webkit-text-stroke: 0.3px;
 	forced-color-adjust: none;
 	-webkit-forced-color-adjust: none;
 }
@@ -236,7 +246,7 @@ color: #F24822;
 .slideDownFadeOut {
 	opacity: 0;
 	animation: slideDownFadeOut 3.5s ease forwards;
-	animation-delay: 3s;
+	animation-delay: 5s;
 }
 
 @keyframes slideDown {
@@ -246,22 +256,29 @@ color: #F24822;
 	}
 	20% {
 		transform: translate(0,0);
-		opacity: 1;
+		opacity: 0.4;
 	}
 	80% {
 		transform: translate(0,0);
-		opacity: 1;
+		opacity: 0.4;
 	}
 	100% {
 		transform: translate(0,0,);
-		opacity: 1;
+		opacity: 0.4;
 	}
 }
 
 .slidedown {
 	opacity: 0;
 	animation: slideDown 3.5s ease forwards;
-	animation-delay: 3s;
+	animation-delay: 5s;
+	width: 40px;
+  height: 40px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
 }
 
 @font-face {

@@ -56,7 +56,6 @@ color: black;
 }
 
 .rsvp-toggle .button.active {
-	outline: 1.5px solid #A999C9;
 	background: #A999C9;
 color:white;
 }

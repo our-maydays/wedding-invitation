@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import './FontSizeToggle'
 
 const audioFile = `${import.meta.env.BASE_URL}bgm.mp3`
 const audioIconOn = `${import.meta.env.BASE_URL}icon/volume-on.svg`
@@ -123,8 +124,6 @@ const BGM = () => {
 			</div>
 			*/}
 			<div className='slidedown' style={{
-				height: '3rem',
-				width: '3rem',
 				display: 'flex',
 				justifyContent: 'center',
 				alignItems: 'center',

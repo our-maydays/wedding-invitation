@@ -1,0 +1,118 @@
+import './App.css'
+
+import Intersect from './Intersect'
+import BGM from './BGM'
+import WeddingDay from './WeddingDay'
+import MainPhoto from './MainPhoto'
+import Invitation from './Invitation'
+import Calendar from './Calendar'
+import Location from './Location'
+import Gallery from './Gallery'
+import Video from './Video'
+import Account from './Account'
+import GuestBook from './GuestBook'
+import Notice from './Notice'
+import RSVP from './RSVP'
+import GuestSnap from './GuestSnap'
+import LastImage from './LastImage'
+import Share from './Share'
+import FontSizeToggle from './FontSizeToggle'
+
+function App() {
+	
+	const debug = process.env.NODE_ENV === 'development'?'solid':'none';
+	return (
+		<div id='wedding-invitation'>
+			<div className='main-frame'>
+				<WeddingDay targetDate='2026-05-09'/>
+
+				<div style={{
+					textAlign: 'right', 
+					position: 'sticky', 
+					top: 0,
+					zIndex: 9,
+				}}>
+					<BGM/>
+				</div>
+				
+				<Intersect>
+					<MainPhoto/>
+				</Intersect>
+			
+				<div style={{fontSize: '8px' }}>
+					build time : {import.meta.env.VITE_BUILD_TIME}
+				</div>
+				
+				<Intersect className='fade-in'>
+					<Invitation/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Calendar/>				
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Gallery/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Video/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Location/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<RSVP/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Account/>
+				</Intersect>
+	
+
+
+
+				<Intersect className='fade-in'>
+					<GuestSnap/>
+				</Intersect>
+				<Intersect className='fade-in'>
+					<GuestBook/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Notice/>
+				</Intersect>
+
+
+
+				<Intersect className='fade-in'>
+					<LastImage/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Share/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					Copyright 경보&유진
+				</Intersect>
+
+				<div style={{
+					position: 'sticky',
+					bottom: '10px',
+					zIndex: 9,
+					display: 'flex',
+					justifyContent:'flex-end',
+					marginRight: '10px',
+
+				}}>
+					<FontSizeToggle/>
+				</div>
+			</div>
+		</div>
+	)
+}
+
+export default App

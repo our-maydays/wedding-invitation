@@ -1,10 +1,13 @@
 .grid-page {
 width: 100%;
 	display: grid !important;
-	grid-template-rows: repeat(2,1,fr);
+	 	grid-template-rows: repeat(2,1fr);
 	grid-template-columns: repeat(2,1fr);
 	gap: 0.4rem;
 			 box-sizing: border-box;
+	grid-auto-flow: column;
+height: 100%;
+				grid-auto-rows: 1fr;
 }
 
 .grid-wrapper .slick-slide > div {
@@ -46,6 +49,7 @@ width: 95%;
 
 .grid-wrapper .slick-dots {
 	position: relative;
+height: 20px;
 	bottom: 0;
 	left: 0;
 	right: 0;			
@@ -115,6 +119,9 @@ width: 95%;
 	object-fit: contain !important;
 	display: block;
 	margin: auto;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 .modal-wrapper .slick-dots {

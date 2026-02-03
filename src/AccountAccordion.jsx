@@ -78,9 +78,18 @@ export default function AccountAccordion({sectionKey, defaultOpen=false}) {
 									<img src={copyIcon} className='icon'/>
  		              <span className='bold-text' style={{marginLeft:'5px'}}> {acc.name}</span>
 								</div>
-                <span>
+								<div style={{width: '6rem'}}>
+									{acc.bank} 
+								</div>
+								<div style={{
+									width: '13.5rem'}}>
+									{acc.number}
+								</div>
+								{/*
+									<span>
                   {acc.bank} {acc.number}
                 </span>
+								*/}
               </div>
             ))}
           </div>

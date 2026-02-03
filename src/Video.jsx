@@ -1,7 +1,7 @@
 // const myVideo = `${import.meta.env.BASE_URL}video/test.mov`
 //const myVideo = './assets/videos/video.mp4'
 const myVideo = `${import.meta.env.BASE_URL}video/video.mov`
-
+const myPoster = `${import.meta.env.BASE_URL}video/poster.jpg`
 
 import {useRef, useEffect, useState} from 'react'
 import './App.css'
@@ -64,14 +64,16 @@ const Video = () => {
 				<video 
 					ref={videoRef}
 					id='myVideo' 
-//					poster={myPoster}
+					poster={myPoster}
 					preload='metadata'
-					src={`${myVideo}#t=0.71`}
+//					src={`${myVideo}#t=0.71`}
+					src={`${myVideo}`}
 					controls
 					style={{
 						width: '100%',
 						height: '100%',
 						objectFit: 'cover',
+						display: 'block',
 					}}
 					controlsList="nodownload"
 					onContextMenu={(e) => e.preventDefault()}

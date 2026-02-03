@@ -28,7 +28,11 @@ const Transport = ( ) => {
 		
 
 			<div className='name'>
-				 셔틀버스&nbsp;  <span style={{lineHeight:'1.9rem',backgroundColor: '#F3E3B8FF'}}>[부산역 → 목장원]</span>
+				셔틀버스&nbsp;
+					<span style={{
+						display: 'inline-block',
+				 		lineHeight:'2.5rem',
+						backgroundColor: '#F3E3B8FF'}}>[부산역 → 목장원]</span>
 			</div>
 			<div className='explain'>
 				부산역 토요코인호텔 앞 <span style={{textDecoration: 'underline'}}>12:00 출발</span> <br/>
@@ -41,7 +45,12 @@ const Transport = ( ) => {
 				시내버스
 			</div>
 			<div className='explain'>
-				6번, 7번, 70번, 71번, 508번  <span style={{lineHeight: '2.5rem',backgroundColor:'#BAD4B9'    }}>75광장 하차</span><br/>
+				6번, 7번, 70번, 71번, 508번 &nbsp; 
+				<span style={{
+					display:'inline-block',
+					lineHeight: '2.2rem',
+					backgroundColor:'#BAD4B9'    
+				}}>75광장 하차</span><br/>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
@@ -50,7 +59,11 @@ const Transport = ( ) => {
 				급행버스
 			</div>
 			<div className='explain'>
-				3003번(김해공항 ↔ 태종도)  <span style={{lineHeight: '1.5rem',backgroundColor:'#BAD4B9'}}>75광장 하차</span> <br/>
+				3003번(김해공항 ↔ 태종도)&nbsp;
+			<span style={{
+				display: 'inline-block',
+				lineHeight: '2.2rem',
+				backgroundColor:'#BAD4B9'}}>75광장 하차</span> <br/>
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
@@ -64,7 +77,11 @@ const Transport = ( ) => {
 
 			<Space height={`${sectionDivide}rem`}/>
 
-			<div className='name'> 전세버스&nbsp;<span style={{lineHeight:'1.9rem',backgroundColor: '#F3E3B8FF'}}>[광주 ↔ 남원 ↔ 목장원]</span> </div>
+			<div className='name'> 전세버스&nbsp;
+				<span style={{
+					display: 'inline-block',
+					lineHeight:'2.4rem',
+					backgroundColor: '#F3E3B8FF'}}>[광주 ↔ 남원 ↔ 목장원]</span> </div>
 			<div className='explain'>
 				상행: 광주시청 주차장 <span style={{textDecoration:'underline'}}>8:00 출발 </span><br/>
 				&nbsp; &nbsp; &nbsp; &nbsp;	남원공설운동장 주차장 <span style={{textDecoration: 'underline'}}>9:00 출발</span> <br/>

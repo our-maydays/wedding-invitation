@@ -12,8 +12,6 @@
 	font-family: Regular;
 	font-size: 1.6rem;
 	width: 100%;
-	height: 2.5rem;
-	line-height: 2.5rem;
 	padding: 0.5rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -22,12 +20,14 @@
 	border-radius: 0.8rem;
 	border: none;
 	outline: none;
+resize: none;
 	&:focus {
 		outline: none;
 	}
 	&::placeholder {
 		color: gray;
 	}
+	box-sizing: border-box;
 }
 
 .passwordInput {
@@ -35,8 +35,6 @@
 	font-family: Regular;
 	font-size: 1.6rem;
 	width: 100%;
-	height: 2.5rem;
-	line-height: 2.5rem;
 	padding: 0.5rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -45,12 +43,14 @@
 	border-radius: 0.8rem;
 	border: none;
 	outline: none;
+resize: none;
 	&:focus {
 		outline: none;
 	}
 	&::placeholder {
 		color: gray;
 	}
+	box-sizing: border-box;
 }
 
 .messageInput {
@@ -62,11 +62,12 @@
 	padding-right: 1rem;
 	width: 100%;
 	height: 100%;
-	line-height: 1.6rem;
+	line-height: 2.5rem;
 	background-color: #F3E3B4;
 	border-radius: 0.8rem;
 	border: none;
 	outline: none;
+resize: none;
 	&:focus {
 		outline: none;
 	}

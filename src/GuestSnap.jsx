@@ -17,16 +17,23 @@ const GuestSnap = () => {
 	return (
 		<div className='content-box'>
 
-			<Space height={`${sectionHeight}rem`}/>
 
 			
-			<div className='section-subtitle'> GUEST SNAP</div>
-			<div className='section-title'> 게스트 스냅 </div>
+			<Space height={`${sectionHeight}rem`}/>
+				<div className='image-container'>
+					<img src={photoUrl}/>
+				</div>
+
+			<Space height={`${sectionHeight}rem`}/>
+			<div className='section-subtitle'> GUESTSNAP</div>
+			<div className='section-title'> 게스트스냅 </div>
 
 			<Space height={`${sectionDivide}rem`}/>
 
 			<div style={{
-				lineHeight: '2.5rem'
+				lineHeight: '2.5rem',
+				width: '95%',
+				margin: '0 auto',
 			}}>
 				저희의 스냅 작가가 되어주세요 <br/><br/>
 				신랑 신부의 행복한 순간을 담아주세요 <br/>
@@ -48,10 +55,6 @@ const GuestSnap = () => {
 				업로드 기한: 26/5/11 23:59까지
 			</div>
 
-			<Space height={`${sectionDivide*2}rem`}/>
-				<div className='image-container'>
-					<img src={photoUrl}/>
-				</div>
 		
 			<Space height={`${sectionHeight}rem`}/>
 

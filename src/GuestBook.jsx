@@ -402,35 +402,19 @@ const GuestBook = () => {
 											position: 'relative',
 											display: 'flex',
 											alignItems: 'center',
+											height: `${buttonHeight}rem`,
 											marginRight: '1rem',
 										}}
 									>
-										<div
-											onClick={passwordShow}
-											style={{
-												margin: '0.5rem',
-												padding: '0',
-												display: 'flex',
-												alignItems: 'center',
-												justifyContent: 'center',
-											}}
-										>
-											<img
-												className='icon'
-												src={show ? unlockIcon : lockIcon}
-											/>
-										</div>
 										<textarea className='passwordInput'
 											type='password'
 											placeholder='비밀번호(숫자만 입력 가능)'
-											style={{
-												WebkitTextSecurity: show ? 'none' : 'disc'
-											}}
 											onChange={(e) => setInputPassword(e.target.value.replace(/[^0-9]/g,''))}
 											value={inputPassword}
+											style={{height: `${buttonHeight}rem`, lineHeight:`${buttonHeight-1}rem`}}
 										/>
 									</div>
-									<div className='button' onClick={verifyPassword} style={{width: '6rem'}}>
+									<div className='button' onClick={verifyPassword} style={{width: '6rem', height:`${buttonHeight}rem`}}>
 										<img src={loginIcon} className='icon'/>
 									</div>
 								</div>
@@ -447,7 +431,7 @@ const GuestBook = () => {
 											placeholder='이름'
 											onChange={ (e) => setEditName(e.target.value)}
 											value={editName}
-											style={{width: '40%'}}
+											style={{height: `${buttonHeight}rem`, width:'50%', lineHeight:`${buttonHeight-1}rem`}}
 										/>
 									</div>
 
@@ -464,6 +448,7 @@ const GuestBook = () => {
 											placeholder='메세지'
 											onChange={(e) => setEditContent(e.target.value)}
 											value={editContent}
+											autoComplete='new-password'
 											style={{height: `${messageHeight-1}rem`}}
 										/>
 									</div>
@@ -549,59 +534,27 @@ const GuestBook = () => {
 						alignItems: 'center',
 						width: '90%',
 						margin: '0 auto',
-						height: `${textHeight}rem`,
+						height: `${buttonHeight}rem`,
 					}}>
-						<div style={{
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-						}}>
-						<div style={{
-							display: 'flex',
-							justifyContent:'center',
-							alignItems: 'center',
-						}}>
-
-						</div>
 						<textarea className='nameInput'
+							type='text'
 							placeholder='이름'
 							onChange={onChangeNameHandler}
 							value={name}
+							style={{height: `${buttonHeight}rem`, lineHeight:`${buttonHeight-1}rem`}}
 						/>
-						</div>
 
 						<div style={{width:'2rem'}}/>
 
-						<div style={{
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-						}}>
-
-							<div
-								onClick={passwordShow}
-								style= {{
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'center',
-									outline: 'none',
-									border: 'none',
-									lineHeight: '1.6rem',
-								}}
-							>
-							</div>
 
 						<textarea className='passwordInput'
-							type='password'
+							type='text'
 							placeholder='비밀번호(숫자만)'
-							style={{
-								WebkitTextSecurity: show ? 'none' : 'disc'
-							}}
 							onChange={onChangePasswordHandler}
 							value={password}
+							style={{height: `${buttonHeight}rem`, lineHeight:`${buttonHeight-1}rem`}}
 						/>
 
-							</div>
 					</div>
 
 					<Space height={`${sectionSpace}rem`}/>
@@ -615,6 +568,7 @@ const GuestBook = () => {
 						height: `${messageHeight}rem`,
 					}}>
 						<textarea className='messageInput'
+							type='text'
 							placeholder='메세지를 작성해주세요'
 							onChange={onChangeContentHandler}
 							value={content}
