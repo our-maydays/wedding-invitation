@@ -48,7 +48,7 @@ const Video = () => {
 	return (
 		<div className='content-box'>
 			<Space height={`${sectionHeight}rem`}/>
-			<div className='section-subtitle'>MAKINGVIDEO</div>
+			<div className='section-subtitle'>MAKING VIDEO</div>
 			<div className='section-title'>메이킹영상</div>
 			<Space height={`${sectionDivide}rem`}/>
 
