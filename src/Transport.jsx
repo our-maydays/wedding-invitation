@@ -76,23 +76,23 @@ const Transport = ( ) => {
 			</div>
 
 			<Space height={`${sectionDivide}rem`}/>
-
+			{/*
 			<div className='name'> 전세버스&nbsp;
 				<span style={{
 					display: 'inline-block',
 					lineHeight:'2.4rem',
 					backgroundColor: '#F3E3B8FF'}}>[광주 ↔ 남원 ↔ 목장원]</span> </div>
 			<div className='explain'>
-				상행: 광주시청 주차장 <span style={{textDecoration:'underline'}}>8:00 출발 </span><br/>
+				가는편: 광주시청 주차장 <span style={{textDecoration:'underline'}}>8:00 출발 </span><br/>
 				&nbsp; &nbsp; &nbsp; &nbsp;	남원공설운동장 주차장 <span style={{textDecoration: 'underline'}}>9:00 출발</span> <br/>
-				하행: 목장원 <span style={{textDecoration:'underline'}}>15:30 출발</span> <br/>
+				오는편: 목장원 <span style={{textDecoration:'underline'}}>15:30 출발</span> <br/>
 			<Space height={`${sectionDivide/2}rem`}/>
 
 			<div className='notation'>
 				* 출발 10분전 탑승 부탁드립니다<br/>
 				* 복귀 시간은 현장 사정에 따라 조정될 수 있습니다<br/>
 			</div>
-
+*/}
 
 			</div>
 
