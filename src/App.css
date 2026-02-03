@@ -24,7 +24,7 @@ html.magnify {
 	font-family: Regular;
 	color: black;
 	width: 100%;
-	max-width: 425px;
+	max-width: 390px;
 
 
 }
@@ -170,11 +170,11 @@ color: #5E3E8C;
 color: #5D3CA6;
 color: #5E3E8C;
 	-webkit-text-stroke: 0.3px;
-
 	border: none;
 	outline: none;
 	forced-color-adjust: none;
 	-webkit-forced-color-adjust: none;
+	letter-spacing: 1px;
 }
 
 .section-subtitle {
@@ -183,12 +183,12 @@ color: #5E3E8C;
 /*	font-family: Diphylleia; */
 /*	font-family: YeongdeokSea; */
 /*	font-family: KCCHanbit; */{/* better than YeongdeokSea*/}
-	letter-spacing: 2.5px;
+	letter-spacing: 2.5px; 
 	font-size: 1.5rem;
 	color: rgb(245,124,97);
 	margin: 0 auto;
 	padding: 0;
-	outline: 0;
+	outline: none;
 	border: 0;
 	-webkit-text-stroke: 0.3px;
 	forced-color-adjust: none;
