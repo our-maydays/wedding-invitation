@@ -28,6 +28,7 @@ height: 100%;
 width: auto;
 margin:0 auto;
 			 object-fit: contain;
+			 object-position: center;
 	animation: firstPhotoZoom 5s ease-in-out forwards;
 	
 }
