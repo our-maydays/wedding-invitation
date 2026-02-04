@@ -375,7 +375,7 @@ const GuestBook = () => {
 									cursor: 'pointer',
 									marginRight: '1rem',
 								}}>
-								<img src={closeIcon} style={{height: '2rem'}}/>
+								<img src={closeIcon} style={{height: '3rem'}}/>
 							</div>
 						</div>
 
@@ -526,7 +526,7 @@ const GuestBook = () => {
 							cursor: 'pointer',
 							marginRight: '1rem',
 						}}>
-							<img src={closeIcon} style={{height: '2rem'}} />
+							<img src={closeIcon} style={{height: '3rem'}} />
 						</div>
 					</div>
 

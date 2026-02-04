@@ -138,7 +138,7 @@ const RSVP = () => {
 							cursor: 'pointer',
 							marginRight: '1rem',
 						}}>
-							<img src={closeIcon} style={{height: '2rem'}}/>
+							<img src={closeIcon} style={{height: '3rem'}}/>
 						</div>
 
 					<div className='rsvp-title'
