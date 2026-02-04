@@ -143,9 +143,8 @@ width: 95%;
 
 .modal-wrapper .slick-dots ul {
 	display: flex !important;
-	width: 80% !important;
+	width: 100% !important;
 	max-width: 100%;
-	
 	margin: 0 auto !important;
 	padding: 0;
 	list-style: none;
@@ -188,3 +187,20 @@ width: 95%;
 	text-align: center;
 	font-family: Regular;
 }
+
+.modal-wrapper .slick-prev,
+.modal-wrapper .slick-next {
+	z-index: 10;
+	width: 50px;
+	height: 50px;
+}
+
+.modal-wrapper .slick-prev {
+left: 20px;
+}
+
+.modal-wrapper .slick-next {
+right: 20px;
+}
+
+
