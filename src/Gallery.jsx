@@ -83,39 +83,22 @@ const Gallery = () => {
 		slidesToScroll: 1,
 		arrows: true,
 		dots: true,
+		customPaging: (i) => (
+			<div className={`custom-dot-bar ${i <= currentIndex ? 'active' : ''}`}></div>
+		),
 		appendDots: (dots) => (
-			<div>
-				<ul> {dots} </ul>
+			<div className='progress-container'>
+				<ul style={{margin: '0px'}}> {dots} </ul>
+				<div className='progress-text'>
+					{currentIndex + 1} / {images.length}
+				</div>
 			</div>
 		),
 		beforeChange: (current, next) => {
-			updateDots(next);
+			setCurrentIndex(next);
 		},
 	})
 
-	const updateDots = (index) => {
-		const dotsUl = document.querySelector('.modal-wrapper .slick-dots ul')
-		if (!dotsUl) return
-
-		const moveX = (containerWidth/2) - (index * dotWidth) - (dotWidth/2)
-		dotsUl.style.transition = 'transform 500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
-		dotsUl.style.transform = `translateX(${moveX}px)`
-
-		const dotItems = dotsUl.querySelectorAll('li')
-		dotItems.forEach((dot, i) => {
-			const distance = Math.abs(i - index)
-			dot.style.transition = 'all 500ms cubic-bezier(0.25, 0.1, 0.25, 1)'
-			if (distance === 0) {
-				dot.style.transform = 'scale(1.2)'
-			} else if (distance === 1) {
-				dot.style.transform = 'scale(0.8)'
-			} else if (distance === 2) {
-				dot.style.transform = 'scale(0.6)'
-			} else {
-				dot.style.transform = 'scale(0.4)'
-			}
-		})
-	}
 
 	useEffect(() => {
 		if (isOpen) {
@@ -207,7 +190,7 @@ const Gallery = () => {
 								zIndex: 1,
 							}}
 						>
-							<img src={closeIcon} style={{height:'2rem'}}/>
+							<img src={closeIcon} style={{height:'3rem'}}/>
 						</div>
 						</div>
 						<Slider {...modalSettings(currentIndex)} key={currentIndex}>

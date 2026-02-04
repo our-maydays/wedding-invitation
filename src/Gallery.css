@@ -50,7 +50,7 @@ width: 95%;
 
 .grid-wrapper .slick-dots {
 	position: relative;
-height: 20px;
+	height: 30px;
 	bottom: 0;
 	left: 0;
 	right: 0;			
@@ -66,20 +66,25 @@ height: 20px;
 	transform: translateY(-50%);
 	margin: 0 0.2rem;						 
 	padding: 0;
-	line-height: 1rem;
-	font-size: 1rem;
-	height: 1rem;
+	line-height: 3rem;
+	font-size: 3rem;
+	height: 3rem;
+	width: 3rem;
 }
 
 .grid-wrapper .slick-dots li button {
 	padding: 0;
 	margin: 0;
-	height: 1rem;
-	line-height: 1rem;
+	height: 3rem;
+	width: 3rem;
+	line-height: 3rem;
 }
 
 .grid-wrapper .slick-dots li button:before {
-	line-height: 1rem;
+	line-height: 3rem;
+	font-size: 1.2rem;
+	width: 3rem;
+	height: 3rem;
 }
 
 
@@ -128,60 +133,58 @@ height: 20px;
 .modal-wrapper .slick-dots {
 	position: absolute;
 	bottom: 2rem;
-	left: 50%;
+	left: 0;
 	right: 0;
-	transform: translateX(-50%);
-	display: block !important;
-	align-items: center;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
-	width: 7.5rem;
-	height: 2.5rem;
-	overflow: hidden;
+	width: 100% !important;
+	height: auto !important;
+ 	transform: none !important;
+	overflow: visible !important;
 }
 
 .modal-wrapper .slick-dots ul {
 	display: flex !important;
-	justify-content: center;
-	align-items: center;
+	width: 80% !important;
+	max-width: 100%;
+	
+	margin: 0 auto !important;
 	padding: 0;
-	margin: 0;
 	list-style: none;
-	will-change: transform;
-	width: max-content;
-	height: 2.5rem;
+	height: 10px;
+	transform: none !important;
 }
 
 .modal-wrapper .slick-dots li {
-	width: 1.5rem !important;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex !important;
-	align-items: center !important;
-	line-height: 1.6rem;
-	height: 1.6rem;
+	flex: 1;
+	height: 100% !important;
+	margin: 0 !important;
+	pointer-events: auto;
 }
 
 .modal-wrapper .slick-dots li button {
+	width: 100% !important;
+	height: 100% !important;
 	padding: 0;
-	margin: 0;
-	height: 100%;
-	line-height: 1.6rem;
-	width: 1.6rem;
-	cursor: pointer;
-	position: absolute !important;
 }
 
 .modal-wrapper .slick-dots li button:before {
-	line-height: 1.6rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 1.6rem;
-	height: 1.6rem;
-	margin: 0;
-	padding: 0;
+	display: none !important;
+}
+
+.custom-dot-bar {
+	width: 100%;
+	height: 10px;
+	background-color: black;
+	transition: background-color 0.3s ease;
+}
+
+.custom-dot-bar.active {
+	background-color: #aec08e;
+}
+
+.progress-text {
+	margin-top: 15px;
+	color: #666;
+	font-size: 1.4rem;
 	text-align: center;
+	font-family: Regular;
 }
