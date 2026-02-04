@@ -82,7 +82,7 @@ width: 95%;
 
 .grid-wrapper .slick-dots li button:before {
 	line-height: 3rem;
-	font-size: 1.2rem;
+	font-size: 10px;
 	width: 3rem;
 	height: 3rem;
 }
