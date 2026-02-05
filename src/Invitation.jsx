@@ -33,7 +33,7 @@ const Invitation = () => {
 				이 봄날의 순간을 소중한 분들과 <br/>
 				함께 기억하고 싶습니다<br/>
 			</div>
-
+			{/*
 			<Space height={`${sectionHeight}rem`}/>
 
 			<div className='box'>
@@ -59,6 +59,7 @@ const Invitation = () => {
 
 
 
+			*/}
 			<Space height={`${sectionDivide}rem`}/>
 		</div>
 	)

@@ -6,6 +6,7 @@ import BGM from './BGM'
 import WeddingDay from './WeddingDay'
 import MainPhoto from './MainPhoto'
 import Invitation from './Invitation'
+import MiddlePhoto from './MiddlePhoto'
 import Introduce from './Introduce'
 import Calendar from './Calendar'
 import Location from './Location'
@@ -119,10 +120,6 @@ function App() {
 				</div>
 			</div>
 			
-				<div style={{fontSize: '8px' }}>
-					build time : {import.meta.env.VITE_BUILD_TIME}
-				</div>
-				
 
 		</div>
 	)
