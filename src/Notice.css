@@ -30,7 +30,9 @@ background: #BAD4B9;
 }
 
 .notice-content {
-	text-align: left;
+	text-align: justify;
+	text-justify: inter-character;
+	text-align-last: left;
 	color: black;
 	font-size: 1.6rem;
 	line-height: 2.0rem;
