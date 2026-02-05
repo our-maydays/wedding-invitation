@@ -171,13 +171,13 @@ width: 95%;
 
 .custom-dot-bar {
 	width: 100%;
-	height: 10px;
-	background-color: black;
+	height: 13px;
+	background-color: #777;
 	transition: background-color 0.3s ease;
 }
 
 .custom-dot-bar.active {
-	background-color: #aec08e;
+	background-color: #A999C9;
 }
 
 .progress-text {
@@ -196,11 +196,11 @@ width: 95%;
 }
 
 .modal-wrapper .slick-prev {
-left: 5px;
+left: 0px;
 }
 
 .modal-wrapper .slick-next {
-right: 5px;
+right: 0px;
 }
 
 

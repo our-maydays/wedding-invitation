@@ -2,6 +2,8 @@ import './App.css'
 import './Invitation.css'
 import Space from './Space.jsx'
 
+const firstPhoto = `${import.meta.env.BASE_URL}image/fig1.jpg`
+
 const Invitation = () => {
 
 	const sectionHeight = 6
@@ -58,7 +60,10 @@ const Invitation = () => {
 			</div>
 
 			<Space height={`${sectionHeight}rem`}/>
+
+
 			<Space height={`${sectionDivide}rem`}/>
+			<img src={firstPhoto} style={{width:'100%'}}/>
 		</div>
 	)
 }
