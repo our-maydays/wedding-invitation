@@ -11,7 +11,7 @@
 
 .notice-title {
 	height: 4rem;
-width: 15rem;
+	width: 15rem;
 	position: absolute;
 	top: -2rem;
 	left: 50%;
@@ -25,7 +25,7 @@ width: 15rem;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-background: #BAD4B9;
+	background: #BAD4B9;
 	border-radius: 4rem;
 }
 
@@ -46,5 +46,5 @@ background: #BAD4B9;
 }
 
 .notice-item {
-display: flex;
+	display: flex;
 }

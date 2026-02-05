@@ -52,7 +52,7 @@
 .rsvp-toggle .button {
 	width: 15rem;
 	background: white;
-color: black;
+	color: black;
 }
 
 .rsvp-toggle .button.active {
@@ -60,20 +60,5 @@ color: black;
 color:white;
 }
 
-.rsvp-name {
-
-}
-
-.rsvp-attendance {
-
-}
-
-.rsvp-guest {
-
-}
-
-.rsvp-side {
-
-}
 
 

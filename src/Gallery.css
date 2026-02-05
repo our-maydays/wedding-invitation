@@ -1,50 +1,49 @@
 .grid-page {
-width: 100%;
+	width: 100%;
 	display: grid !important;
-	 	grid-template-rows: repeat(2,1fr);
+	grid-template-rows: repeat(2,1fr);
 	grid-template-columns: repeat(2,1fr);
 	gap: 0.4rem;
-padding: 0.2rem;
-			 box-sizing: border-box;
+	padding: 0.2rem;
+	box-sizing: border-box;
 	grid-auto-flow: column;
-height: 100%;
-				grid-auto-rows: 1fr;
+	height: 100%;
+	grid-auto-rows: 1fr;
 }
 
 .grid-wrapper .slick-slide > div {
-display: block;
-width: 100%;
+	display: block;
+	width: 100%;
 }
 
 
 .grid-cell {
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .image-wrapper {
-position: relative;
-width: 100%;
-height: 100%;
-overflow: hidden;
-border-radius: 0.3rem;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 0.3rem;
 }
 
 .image-wrapper img {
 	width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-
+	height: 100%;
+	object-fit: cover;
+	display: block;
 }
 
 
 .grid-wrapper {
 	position: relative;
-width: 95%;
+	width: 95%;
 	margin: auto;
 }
 
@@ -198,11 +197,11 @@ width: 95%;
 }
 
 .modal-wrapper .slick-prev {
-left: 0px;
+	left: 0px;
 }
 
 .modal-wrapper .slick-next {
-right: 0px;
+	right: 0px;
 }
 
 

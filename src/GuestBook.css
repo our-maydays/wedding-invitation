@@ -20,7 +20,7 @@
 	border-radius: 0.8rem;
 	border: none;
 	outline: none;
-resize: none;
+	resize: none;
 	&:focus {
 		outline: none;
 	}
@@ -43,7 +43,7 @@ resize: none;
 	border-radius: 0.8rem;
 	border: none;
 	outline: none;
-resize: none;
+	resize: none;
 	&:focus {
 		outline: none;
 	}
@@ -67,7 +67,7 @@ resize: none;
 	border-radius: 0.8rem;
 	border: none;
 	outline: none;
-resize: none;
+	resize: none;
 	&:focus {
 		outline: none;
 	}
