@@ -18,7 +18,7 @@ const Introduce = () => {
 
 			<div className='introduce-box'>
 				<div className='introduce-body' style={{paddingLeft:0}}>
-					<span style={{fontSize: '1.4rem'}}>신랑</span>
+					<span style={{fontSize: '1.4rem',color:'#5E3E8C'}}>신랑</span>
 					&nbsp;
 					<span className='bold-text' style={{fontSize:'1.8rem'}}>강경보</span><br/>
 					<hr className='divider'/>
@@ -36,7 +36,7 @@ const Introduce = () => {
 					<img src={bridePhoto}/>
 				</div>
 				<div className='introduce-body'>
-					<span style={{fontSize: '1.4rem'}}>신부</span>
+					<span style={{fontSize: '1.4rem',color:'#5E3E8C'}}>신부</span>
 					&nbsp;
 					<span className='bold-text' style={{fontSize:'1.8rem'}}>장유진</span> <br/>
 					<hr className='divider'/>
