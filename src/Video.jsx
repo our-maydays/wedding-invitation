@@ -66,9 +66,14 @@ const Video = () => {
 					id='myVideo' 
 					poster={myPoster}
 					preload='metadata'
-//					src={`${myVideo}#t=0.71`}
 					src={`${myVideo}`}
 					controls
+					onPlay={ () => {
+						window.dispatchEvent(new CustomEvent('videoPlaying', {detail:true}))
+					}}
+					onPause={ () => {
+						window.dispatchEvent(new CustomEvent('videoPlaying', {detail:false}))
+					}}
 					style={{
 						width: '100%',
 						height: '100%',

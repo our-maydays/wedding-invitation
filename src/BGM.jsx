@@ -46,6 +46,28 @@ const BGM = () => {
 	}, [])
 
 	useEffect( () => {
+		const handleVideoState = (e) => {
+			const isVideoPlaying = e.detail
+			if (isVideoPlaying) {
+				if (audioRef.current && !audioRef.current.paused) {
+					audioRef.current.pause()
+					setIsPlaying(false)
+				}
+			} else {
+				/*
+				if (audioRef.current && audioRef.current.puased) {
+					audioRef.current.play();
+					setIsPlaying(true);
+				}
+				*/
+			}
+		}
+
+		window.addEventListener('videoPlaying', handleVideoState)
+		return () => window.removeEventListener('videoPlaying',handleVideoState)
+	}, [])
+
+	useEffect( () => {
 		const stopAudio = () => {
 			if (audioRef.current) {
 				audioRef.current.pause()

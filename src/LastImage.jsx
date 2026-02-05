@@ -2,7 +2,7 @@ import './App.css'
 import Space from './Space'
 
 const mainphoto = `${import.meta.env.BASE_URL}image/DSC00420.jpg`
-const sectionHeight = 6
+const sectionHeight = 3
 
 
 const LastImage = () => {
