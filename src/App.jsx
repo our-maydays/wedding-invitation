@@ -6,6 +6,7 @@ import BGM from './BGM'
 import WeddingDay from './WeddingDay'
 import MainPhoto from './MainPhoto'
 import Invitation from './Invitation'
+import Introduce from './Introduce'
 import Calendar from './Calendar'
 import Location from './Location'
 import Gallery from './Gallery'
@@ -56,6 +57,10 @@ function App() {
 				
 				<Intersect className='fade-in'>
 					<Invitation/>
+				</Intersect>
+
+				<Intersect className='fade-in'>
+					<Introduce/>
 				</Intersect>
 
 				<Intersect className='fade-in'>
