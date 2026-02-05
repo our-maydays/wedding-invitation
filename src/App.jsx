@@ -50,11 +50,7 @@ function App() {
 				<Intersect>
 					<MainPhoto/>
 				</Intersect>
-			
-				<div style={{fontSize: '8px' }}>
-					build time : {import.meta.env.VITE_BUILD_TIME}
-				</div>
-				
+
 				<Intersect className='fade-in'>
 					<Invitation/>
 				</Intersect>
@@ -122,6 +118,11 @@ function App() {
 					<FontSizeToggle/>
 				</div>
 			</div>
+			
+				<div style={{fontSize: '8px' }}>
+					build time : {import.meta.env.VITE_BUILD_TIME}
+				</div>
+				
 
 		</div>
 	)
