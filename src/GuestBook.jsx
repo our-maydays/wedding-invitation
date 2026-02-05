@@ -7,15 +7,8 @@ import moment from 'moment'
 import 'moment/dist/locale/ko'
 import SHA256 from 'crypto-js/sha256'
 
-const sendIcon = `${import.meta.env.BASE_URL}/icon/send.svg`
-const messageIcon = `${import.meta.env.BASE_URL}/icon/message.svg`
 const loginIcon = `${import.meta.env.BASE_URL}/icon/check.svg`
 const closeIcon = `${import.meta.env.BASE_URL}/icon/close_icon.svg`
-const lockIcon = `${import.meta.env.BASE_URL}/icon/lock.svg`
-const unlockIcon = `${import.meta.env.BASE_URL}/icon/unlock.svg`
-const editIcon = `${import.meta.env.BASE_URL}/icon/write.svg`
-const eraseIcon = `${import.meta.env.BASE_URL}/icon/erase.svg`
-const nameIcon = `${import.meta.env.BASE_URL}/icon/user.svg`
 
 const sectionHeight = 6
 const sectionDivide = 3

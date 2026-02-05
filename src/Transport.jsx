@@ -3,10 +3,6 @@ import './App.css'
 import Space from './Space'
 
 
-const shuttleIcon = `${import.meta.env.BASE_URL}icon/shuttle.svg`
-const busIcon = `${import.meta.env.BASE_URL}icon/bus.svg`
-const expressbusIcon = `${import.meta.env.BASE_URL}icon/expressbus.svg`
-const carIcon = `${import.meta.env.BASE_URL}icon/car.svg`
 
 const sectionHeight = 6
 const sectionDivide = 3
@@ -35,7 +31,12 @@ const Transport = ( ) => {
 						backgroundColor: '#F3E3B8FF'}}>[부산역 → 목장원]</span>
 			</div>
 			<div className='explain'>
-				부산역 토요코인호텔 앞 <span style={{textDecoration: 'underline'}}>12:00 출발</span> <br/>
+				부산역 토요코인호텔 앞&nbsp;
+				<span style={{
+					display: 'inline-block',
+					lineHeight: '2.2rem',
+					backgroundColor:'#BAD4B9',
+				}}>12:00 출발</span> <br/>
 				<span className='notation'>	* 편도 운행 </span>
 			</div>
 

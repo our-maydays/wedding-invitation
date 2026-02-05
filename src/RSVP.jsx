@@ -88,7 +88,7 @@ const RSVP = () => {
 			<Space height={`${sectionSpace}rem`}/>
 
 			<div className='button' onClick={ () => setIsOpen(true)} style={{width: '15rem', margin:'auto'}}>
-				참석여부 전달하기
+				참석 여부 전달
 			</div>
 
 			<Space height={`${sectionHeight}rem`}/>
