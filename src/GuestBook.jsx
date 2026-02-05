@@ -268,7 +268,7 @@ const GuestBook = () => {
 		}}>
 			<Space height={`${sectionHeight}rem`}/>
 
-			<div className='section-subtitle'>GUESTBOOK</div>
+			<div className='section-subtitle'>GUEST BOOK</div>
 			<div className='section-title'>방명록</div>
 
 			<Space height={`${sectionDivide}rem`}/>

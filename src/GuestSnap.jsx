@@ -25,7 +25,7 @@ const GuestSnap = () => {
 				</div>
 
 			<Space height={`${sectionHeight}rem`}/>
-			<div className='section-subtitle'> GUESTSNAP</div>
+			<div className='section-subtitle'> GUEST SNAP</div>
 			<div className='section-title'> 게스트스냅 </div>
 
 			<Space height={`${sectionDivide}rem`}/>
@@ -35,7 +35,7 @@ const GuestSnap = () => {
 				width: '95%',
 				margin: '0 auto',
 			}}>
-				저희의 스냅 작가가 되어주세요 <br/><br/>
+				저희의 사진 작가가 되어주세요 <br/><br/>
 				신랑 신부의 행복한 순간을 담아주세요 <br/>
 				
 				예식 당일 아래의 업로드 버튼을 통해 올려주세요<br/>
