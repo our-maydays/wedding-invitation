@@ -48,9 +48,13 @@ function App() {
 					<BGM/>
 				</div>
 				
+				<div className='photo-sticky-container'>
 				<Intersect>
 					<MainPhoto/>
 				</Intersect>
+				</div>
+
+				<div className='content-wrapper'>
 
 				<Intersect className='fade-in'>
 					<Invitation/>
@@ -118,6 +122,9 @@ function App() {
 				}}>
 					<FontSizeToggle/>
 				</div>
+
+				</div>
+
 			</div>
 			
 
