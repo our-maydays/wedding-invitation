@@ -43,7 +43,6 @@ const MainPhoto = () => {
 				/>
 			</div>
 
-			<Space height={`${sectionHeight}rem`}/>
 
 		</div>
 	)

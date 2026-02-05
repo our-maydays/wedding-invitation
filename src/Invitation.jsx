@@ -9,7 +9,7 @@ const Invitation = () => {
 
 	return (
 		<div className='content-box'>
-			<Space height={`${sectionDivide}rem`}/>
+			<Space height={`${sectionHeight}rem`}/>
 			<div className='section-subtitle'> INVITATION </div>
 			<div className='section-title'>
 					저희만의 작은 축제에<br/> <span className='line-break'/> 소중한 분들을 초대합니다
