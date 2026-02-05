@@ -60,7 +60,7 @@ const Invitation = () => {
 
 
 			*/}
-			<Space height={`${sectionDivide}rem`}/>
+			<Space height={`${sectionHeight}rem`}/>
 		</div>
 	)
 }
