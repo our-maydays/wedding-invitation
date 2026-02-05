@@ -33,9 +33,11 @@ const Transport = ( ) => {
 			<div className='explain'>
 				부산역 토요코인호텔 앞&nbsp;
 				<span style={{
+					textDecoration: 'underline',
+					textDecorationThickness: '1px',
+					textUnderlineOffset: '2px',
 					display: 'inline-block',
 					lineHeight: '2.2rem',
-					backgroundColor:'#BAD4B9',
 				}}>12:00 출발</span> <br/>
 				<span className='notation'>	* 편도 운행 </span>
 			</div>
