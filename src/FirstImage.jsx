@@ -3,7 +3,7 @@ import './FirstImage.css'
 
 import Space from './Space'
 
-const firstPhoto = `${import.meta.env.BASE_URL}image/firstphoto.webp`
+const firstPhoto = `${import.meta.env.BASE_URL}image/firstphoto`
 
 import {useState, useEffect} from 'react'
 
