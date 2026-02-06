@@ -2,8 +2,10 @@ import './App.css'
 import './Introduce.css'
 import Space from './Space'
 
-const bridePhoto = `${import.meta.env.BASE_URL}image/DSC09234.jpg`
-const groomPhoto = `${import.meta.env.BASE_URL}image/DSC09021.jpg`
+//const bridePhoto = `${import.meta.env.BASE_URL}image/DSC09234.jpg`
+//const groomPhoto = `${import.meta.env.BASE_URL}image/DSC09021.jpg`
+const bridePhoto = `${import.meta.env.BASE_URL}image/bride.webp`
+const groomPhoto = `${import.meta.env.BASE_URL}image/groom.webp`
 
 const sectionSpace = 2
 const sectionHeight = 6
