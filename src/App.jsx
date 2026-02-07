@@ -73,83 +73,83 @@ function App() {
 
 				<div className='content-wrapper'>
 
+				<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
-							<Invitation/>
-						</Suspense>
+						<Invitation/>
 					</Intersect>
+				</Suspense>
 
+				<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
-							<Introduce/>
-						</Suspense>
+						<Introduce/>
 					</Intersect>
+				</Suspense>
 
+				<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
-							<Calendar/>				
-						</Suspense>
+						<Calendar/>				
 					</Intersect>
+				</Suspense>
 
+				<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<Gallery/>
-						</Suspense>
 					</Intersect>
+				</Suspense>
 
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<Video/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<Location/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<RSVP/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
+					<Suspense>
 					<Intersect className='fade-in'>
-						<Suspense>
 							<Account/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 	
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<GuestSnap/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<GuestBook/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<Notice/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<LastImage/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
+					<Suspense >
 					<Intersect className='fade-in'>
-						<Suspense >
 							<Share/>
-						</Suspense>
 					</Intersect>
+					</Suspense>
 
 					<Intersect className='fade-in'>
 						Copyright 경보&유진
