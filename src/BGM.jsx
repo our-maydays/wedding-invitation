@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './FontSizeToggle'
 
-const audioFile = `${import.meta.env.BASE_URL}bgm.mp3`
+const audioFile = `${import.meta.env.BASE_URL}bgm/bgm.mp3`
 const audioIconOn = `${import.meta.env.BASE_URL}icon/volume-on.svg`
 const audioIconOff = `${import.meta.env.BASE_URL}icon/volume-off.svg`
 
@@ -17,8 +17,6 @@ const BGM = () => {
 		audioRef.current = audio
 		audioRef.current.load()
 		audioRef.current.addEventListener('ended', () => setIsPlaying(false))
-		console.log(audioFile)
-		console.log('src', audioRef.src)
 
 		{/* scroll, gesture, touch 하면 음악 자동재생
 		const handleScrollStart = () => {

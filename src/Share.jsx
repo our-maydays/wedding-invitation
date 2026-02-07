@@ -22,7 +22,6 @@ const Share = () => {
 	useEffect( () => {
 		Kakao.cleanup()
 		Kakao.init(import.meta.env.VITE_REACT_APP_KAKAO_JAVASCRIPT_KEY);
-		console.log(Kakao.isInitialized())
 	}, [])
 
 	const kakaoShare = async () => {
