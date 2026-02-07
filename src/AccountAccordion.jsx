@@ -85,11 +85,6 @@ export default function AccountAccordion({sectionKey, defaultOpen=false}) {
 									width: '13.5rem'}}>
 									{acc.number}
 								</div>
-								{/*
-									<span>
-                  {acc.bank} {acc.number}
-                </span>
-								*/}
               </div>
             ))}
           </div>
