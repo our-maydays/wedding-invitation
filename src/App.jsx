@@ -165,11 +165,11 @@ function App() {
 					}}>
 						<FontSizeToggle/>
 					</div>
-
+					{/*
 					<div style={{fontSize:'8px'}}>
 						build time : {import.meta.env.VITE_BUILD_TIME}
 					</div>
-
+					*/}
 				</div>
 
 			</div>

@@ -4,7 +4,7 @@ import Space from './Space'
 
 const sectionHeight = 6
 const sectionDivide = 3
-const photoUrl = `${import.meta.env.BASE_URL}image/guestsnapphoto`
+const photoUrl = `${import.meta.env.BASE_URL}image/guestsnapphoto.jpg`
 
 const GuestSnap = () => {
 
