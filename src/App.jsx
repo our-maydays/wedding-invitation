@@ -19,7 +19,7 @@ const GuestBook = lazy( () => import('./GuestBook') )
 const Notice = lazy( () => import('./Notice') )
 const RSVP = lazy( () => import('./RSVP') )
 const GuestSnap = lazy( () => import('./GuestSnap') )
-const LastImage = lazy( () => import('./LastImage') )
+const LastPhoto = lazy( () => import('./LastPhoto') )
 const Share = lazy( () => import('./Share') )
 
 {/*
@@ -73,82 +73,82 @@ function App() {
 
 				<div className='content-wrapper'>
 
-				<Suspense >
-					<Intersect className='fade-in'>
-						<Invitation/>
-					</Intersect>
-				</Suspense>
+					<Suspense >
+						<Intersect className='fade-in'>
+							<Invitation/>
+						</Intersect>
+					</Suspense>
 
-				<Suspense >
-					<Intersect className='fade-in'>
-						<Introduce/>
-					</Intersect>
-				</Suspense>
+					<Suspense >
+						<Intersect className='fade-in'>
+							<Introduce/>
+						</Intersect>
+					</Suspense>
 
-				<Suspense >
-					<Intersect className='fade-in'>
-						<Calendar/>				
-					</Intersect>
-				</Suspense>
+					<Suspense >
+						<Intersect className='fade-in'>
+							<Calendar/>				
+						</Intersect>
+					</Suspense>
 
-				<Suspense >
-					<Intersect className='fade-in'>
+					<Suspense >
+						<Intersect className='fade-in'>
 							<Gallery/>
-					</Intersect>
-				</Suspense>
+						</Intersect>
+					</Suspense>
 
 					<Suspense >
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<Video/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 
 					<Suspense >
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<Location/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 
 					<Suspense >
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<RSVP/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 
 					<Suspense>
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<Account/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 	
 					<Suspense >
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<GuestSnap/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 
 					<Suspense >
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<GuestBook/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 
 					<Suspense >
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<Notice/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 
 					<Suspense >
-					<Intersect className='fade-in'>
-							<LastImage/>
-					</Intersect>
+						<Intersect className='fade-in'>
+							<LastPhoto/>
+						</Intersect>
 					</Suspense>
 
 					<Suspense >
-					<Intersect className='fade-in'>
+						<Intersect className='fade-in'>
 							<Share/>
-					</Intersect>
+						</Intersect>
 					</Suspense>
 
 					<Intersect className='fade-in'>
@@ -165,11 +165,13 @@ function App() {
 					}}>
 						<FontSizeToggle/>
 					</div>
+
 					{/*
 					<div style={{fontSize:'8px'}}>
 						build time : {import.meta.env.VITE_BUILD_TIME}
 					</div>
 					*/}
+
 				</div>
 
 			</div>

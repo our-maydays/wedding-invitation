@@ -1,11 +1,11 @@
 import './App.css'
 import Space from './Space'
 
-const mainphoto = `${import.meta.env.BASE_URL}image/DSC00420.jpg`
+const mainphoto = `${import.meta.env.BASE_URL}image/lastphoto.jpg`
 const sectionHeight = 3
 
 
-const LastImage = () => {
+const LastPhoto = () => {
 
 	return (
 		<div className='content-box'>
@@ -23,4 +23,4 @@ const LastImage = () => {
 
 }
 
-export default LastImage
+export default LastPhoto
