@@ -21,7 +21,7 @@ export default function AccountAccordion({sectionKey, defaultOpen=false}) {
       key: 'bride',
       title: '신부측',
       accounts: [
-        { name: '장상문', bank: '농협', number: '010-2656-4747-49' },
+        { name: '장상문', bank: '농협', number: '010-2656-4747-09' },
         { name: '장유진', bank: '우리은행', number: '1002-457-422980' },
       ],
     },
