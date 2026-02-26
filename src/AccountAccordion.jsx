@@ -13,7 +13,6 @@ export default function AccountAccordion({sectionKey, defaultOpen=false}) {
       title: '신랑측',
       accounts: [
         { name: '강대원', bank: '국민은행', number: '118-24-0371-126' },
-        { name: '노신조', bank: '국민은행', number: '123-01-0085-531' },
         { name: '강경보', bank: '우리은행', number: '1002-545-770512' },
       ],
     },
