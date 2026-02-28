@@ -37,7 +37,7 @@ const Notice = () => {
 
 							<div className='notice-item'>
 								<div style={{fontFamily:'sans-serif'}}>✓&nbsp;</div>
-								'도도한 쭈쭈바'의 소소한
+								'슬이생밴드'의 소소한
 								축하 무대가	준비되어 있습니다
 							</div>
 				</div>
