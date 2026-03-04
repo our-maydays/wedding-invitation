@@ -37,8 +37,8 @@ const Notice = () => {
 
 				</div>
 			</div>
-			
-			<Space height={`${sectionHeight/2}rem`}/>
+
+			<Space height={`${sectionHeight/2}rem`}/> 
 
 		</div>
 	)
