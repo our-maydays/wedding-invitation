@@ -33,7 +33,7 @@ const RSVP = () => {
 	const [side, setSide] = useState(null)
 	const [attendance, setAttendance] = useState('true')
 	const [name, setName] = useState('')
-	const [guests, setGuests] = useState(1)
+	const [guests, setGuests] = useState(0)
 
 	const handleSubmit = async () => {
 		if (!name.trim()) {
