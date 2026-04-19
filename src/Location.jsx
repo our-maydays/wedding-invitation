@@ -15,11 +15,6 @@ const Location = () => {
 	return (
 		<div className='content-box'>
 			
-			<Space height={`${sectionDivide}rem`}/>
-			<div className='image-container'>
-				<img src={locationUrl}/>
-			</div>
-
 			<Space height={`${sectionHeight}rem`}/>
 
 			<div className='section-subtitle'>LOCATION</div>
