@@ -1,4 +1,5 @@
 import './App.css'
+import './Location.css'
 import Space from './Space.jsx'
 
 import Transport from './Transport'
@@ -8,10 +9,18 @@ import Map from './Map'
 const sectionHeight = 6
 const sectionDivide = 3
 
+const locationUrl = `${import.meta.env.BASE_URL}image/wedding.png`
+
 const Location = () => {
 	return (
 		<div className='content-box'>
 			
+			<Space height={`${sectionDivide}rem`}/>
+
+			<div className='image-container' style={{outline:'1px solid black'}}>
+				<img src={locationUrl}/>
+			</div>
+
 			<Space height={`${sectionHeight}rem`}/>
 
 			<div className='section-subtitle'>LOCATION</div>
