@@ -9,7 +9,7 @@ import Map from './Map'
 const sectionHeight = 6
 const sectionDivide = 3
 
-const locationUrl = `${import.meta.env.BASE_URL}image/wedding.png`
+const locationUrl = `${import.meta.env.BASE_URL}image/weddinglocation.png`
 
 const Location = () => {
 	return (
