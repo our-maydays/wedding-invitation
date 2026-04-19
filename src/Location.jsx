@@ -16,8 +16,7 @@ const Location = () => {
 		<div className='content-box'>
 			
 			<Space height={`${sectionDivide}rem`}/>
-
-			<div className='image-container' style={{outline:'1px solid black'}}>
+			<div className='image-container'>
 				<img src={locationUrl}/>
 			</div>
 
@@ -52,6 +51,12 @@ const Location = () => {
 			<Transport/>
 
 			<Space height={`${sectionHeight}rem`}/>
+			
+			<div className='image-container'>
+				<img src={locationUrl}/>
+			</div>
+
+
 		</div>
 	)
 }
