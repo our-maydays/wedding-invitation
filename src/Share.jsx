@@ -31,7 +31,7 @@ const Share = () => {
 
 		try {
 			Kakao.Share.sendCustom({
-				templateId: 132732,
+				templateId: 12184,
 			})
 		} catch (error) {
 			console.error(error);
